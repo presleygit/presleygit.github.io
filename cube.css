@@ -1,0 +1,31 @@
+/*
+BODY, TD, LI   {font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
+*/
+
+ body {
+  margin:0;
+  padding:28px 0 0 8px;
+  background-color:#fff;
+ }
+th, td {
+  padding-left:48px;
+  text-align: left;
+}
+
+div.hor {width:320px; padding-left:48px; display:inline-block;}
+div.hors {width:180px; padding-left:48px; display:inline-block;}
+.rp180 {width:180px;}
+.roofpig {display:inline-block;}
+
+.bl {padding:0 2px 0 2px; background-color:#09f;}
+.gr {padding:0 2px 0 2px; background-color:#3f0;}
+.wh {padding:0 2px 0 2px; background-color:#fff; border:thin solid #aaa;}
+.ye {padding:0 2px 0 2px; background-color:#ff0;}
+.re {padding:0 2px 0 2px; background-color:#f30;}
+.or {padding:0 2px 0 2px; background-color:#f93;}
+.pu {padding:0 2px 0 2px; background-color:purple;}
+.sa {padding:0 2px 0 2px; background-color:salmon;}
+
+.iwx {padding:0 2px 0 2px; background-color:#888; color:#fff;}
+.ibx {padding:0 2px 0 2px; background-color:#888;}
+
