@@ -1,15 +1,7 @@
-/*
-BODY, TD, LI   {font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
-*/
-
- body {
+body {
   margin:0;
   padding:28px 0 0 8px;
   background-color:#fff;
- }
-th, td {
-  padding-left:48px;
-  text-align: left;
 }
 
 div.hor {width:320px; padding-left:48px; display:inline-block;}
