@@ -19,21 +19,23 @@
 <div class="roofpig rp180" data-config="colored=URF RF|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB|flags=startsolved showalg">圖2</div>
 
 <h2>前往中繼站</h2>
-組第4個pair時，先將所有已做好的前3個pair全部轉到同一層，並且有互相連接的那兩個pair在旋轉另一面時要能完全分離，這樣的形狀就是下面圖3。已做好的前3個pair皆可視為相同。而要組新pair的角塊位置則會因此固定在與舊pair的角塊相鄰且不連結舊pair的位置。接下的轉動前後結果舊pair的位置形狀皆不改變
+組第4個pair時，先將所有已做好的前3個pair全部轉到同一層，並且有互相連接的那兩個pair在旋轉另一面時要能完全分離，這樣的形狀就是下面圖3。已做好的前3個pair皆可視為相同。而要組新pair的角塊位置則會因此固定在圖3有顏色的那個位置。接下的轉動前後結果舊pair的位置形狀皆不改變
 <p>
-連結兩舊pair角塊的邊塊位置為圖4中的<span class="ibx">X</span>符號，不連結任何新舊pair角塊的邊塊位置為圖5中的<span class="ibx">X</span>符號，這兩個邊塊位置皆為中繼站
+為方便下面解說，這裡中繼站M為圖4中的<span class="ibx">X</span>符號位置
+<p>
+中繼站N為圖5中的<span class="ibx">X</span>符號位置
 <p>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR|flags=startsolved showalg">圖3</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF X:UL|flags=startsolved showalg">圖4</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF X:RB|flags=startsolved showalg">圖5</div>
 <dl>
-<dt>前往中繼站連結兩舊pair角塊的邊塊位置</dt>
+<dt>前往中繼站M</dt>
 <dd>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RF:RB UFR:FDR|alg=R' U R U2' R' U' R|flags=startsolved showalg">轉動1</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FU:RD FRU:FDR|alg=R2 U R2' U2' R2 U' R2'|flags=startsolved showalg">轉動2</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RF:RF UFR:FDR|alg=U R U' R' U' R' U' R U R|flags=startsolved showalg">轉動3</div>
 </dd>
-<dt>前往中繼站不連結任何新舊pair角塊的邊塊位置</dt>
+<dt>前往中繼站N</dt>
 <dd>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF UF:UL FRU:FDR|alg=R' U R U2' R' U' R|flags=startsolved showalg">轉動4</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FU:RF FRU:FDR|alg=R2' U' R2 U R2'|flags=startsolved showalg">轉動5</div>
@@ -43,15 +45,17 @@
 <h2>中繼站的邊塊與新pair的角塊組合新pair</h2>
 <dl>
 <dt>
-在要組合新pair的角塊上，與要組合邊塊同色的面皆垂直於所有舊pair所在的那一面，則	由不連結任何新舊pair角塊的邊塊位置出發，這也算是RU組pair轉法
+在要組合新pair的角塊上，與要組合邊塊同色的面是下圖6有<span class="sa">X</span>符號的面，則須使用中繼站N，這也算是RU組pair轉法
 </dt>
 <dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=D:salmon|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF D:RB D:FDR X:FdR|flags=startsolved showalg">圖6</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FU:RB FRU:FDR|alg=R2 U|flags=startsolved showalg">轉動6</div>
 </dd>
 <dt>
-在要組合新pair的角塊上，與要組合邊塊同色的面其中有一個面平行於所有舊pair所在的那一面，則由連結兩舊pair角塊的邊塊位置出發
+在要組合新pair的角塊上，與要組合邊塊同色的面是下圖7有<span class="sa">X</span>符號的面，則須使用中繼站M
 </dt>
 <dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=D:salmon|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF D:UL D:FDR X:fDR|flags=startsolved showalg">圖7</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FR:UL UFR:FDR|alg=R2 U R2' U2' R2|flags=startsolved showalg">轉動7</div>
 </dd>
 </dl>
@@ -60,7 +64,7 @@
 
 <dl>
 <dt>
-下面範例1中，可組新pair的邊塊顏色為<span class="re">&emsp;</span><span class="ye">&emsp;</span>，在要組新pair的角塊上有這兩個顏色的R, F面皆垂直於所有舊pair所在的U面，故要先用轉動2,4先將這個邊塊移至不連結任何新舊pair的邊塊位置，再用轉動6組新的pair
+下面範例1中，可組新pair的邊塊顏色為<span class="re">&emsp;</span><span class="ye">&emsp;</span>，在要組新pair的角塊上有這兩個顏色的面如上圖6，故要先用轉動2,4先將這個邊塊移至中繼站N，再用轉動6組新的pair
 </dt>
 <dd>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR FU:RD|alg=R2 U R2' U2' R2 U' R2' R' U R U2' R' U' R R2 U|flags=startsolved showalg">範例1</div>
@@ -73,7 +77,7 @@
 </div>
 </dd>
 <dt>
-下面範例2中，可組新pair的邊塊顏色為<span class="gr">&emsp;</span><span class="re">&emsp;</span>，在要組新pair的角塊上有這兩個顏色的D, R面，其中D面平行於所有舊pair所在的U面，故要先用轉動3先將這個邊塊移至連結兩舊pair的邊塊位置，再用轉動7組新的pair
+下面範例2中，可組新pair的邊塊顏色為<span class="gr">&emsp;</span><span class="re">&emsp;</span>，在要組新pair的角塊上有這兩個顏色的面如上圖7，故要先用轉動3先將這個邊塊移至中繼站M，再用轉動7組新的pair
 </dt>
 <dd>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FR:FR UFR:FDR|alg=U R U' R' U' R' U' R U R R2 U R2 U2 R2|flags=startsolved showalg">範例2</div>
