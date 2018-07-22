@@ -12,10 +12,10 @@
 
 <h2>前言</h2>
 <p>
-現在要做出第3個pair，也就是下圖有顏色的那個pair，在這裡的解說都是以其角塊顏色為<span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>，邊塊顏色為<span class="gr">&emsp;</span><span class="wh">&emsp;</span>。<span class="iwx">X</span>的部份為之前已做好的2個pair。這個步驟的所有轉動皆只轉動R, U面，且不破壞之前步驟已做好的2個pair
+現在要做出第3個pair，也就是下圖1中有顏色的那個pair，在這裡的解說都是以其角塊顏色為<span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>，邊塊顏色為<span class="gr">&emsp;</span><span class="wh">&emsp;</span>。<span class="iwx">X</span>的部份為之前已做好的2個pair。這個步驟的所有轉動皆只轉動R, U面，且不破壞之前步驟已做好的2個pair
 <p>
-做這個pair時就不像之前那2個，不是隨隨便便做出這個pair就可以，做得不好以後在不破壞這3個pair的情形下是無法轉成六面的。這個pair要做得好其實與下圖沒用到的位於UFL, UFR, DFR那3個角塊的扭轉方向相不相同有關
-<div class="roofpig rp180" data-config="colored=DRB DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|flags=startsolved showalg"></div>
+做這個pair時就不像之前那2個，不是隨隨便便做出這個pair就可以，做得不好以後在不破壞這3個pair的情形下是無法轉成六面的。這個pair要做得好其實與下圖1中沒用到的位於UFL, UFR, DFR那3個角塊的扭轉方向相不相同有關
+<div class="roofpig rp180" data-config="colored=DRB DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|flags=startsolved showalg">圖1</div>
 <h2>什麼是角塊扭轉方向相同？</h2>
 如果在角塊都歸位的狀況下，兩個角塊扭轉方向相同是說當那個角塊的頂點面對你，可由頂點為中心扭轉那個角塊到正確方向的次數一樣。但這個不好判斷，現在我們要判斷的那3個角塊在歸位後都剛好在同一面，所以我們可以用那一面的顏色來判斷，在這裡是的顏色為<span class="re">&emsp;</span>
 <p>
@@ -26,81 +26,57 @@
 <h2>什麼是第3個「好」pair？</h2>
 事實上如果在不破壞第3個pair的情形下只轉動U, R面，在全部角塊都歸位後，是無法改變沒用到的UFL, UFR, DFR那3個角塊彼此之間的同不同向。做得好的第3個pair在全部角塊都歸位後，沒有用到的那3個角塊必須全部同向。就完全是下面這三個情形之一。
 <p>
-<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|flags=startsolved showalg"></div>
-<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg"></div>
-<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg"></div>
-<h2>RU組pair轉法的角塊起始位置</h2>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|flags=startsolved showalg">圖2</div>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg">圖3</div>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg">圖4</div>
+<h2>RU組pair轉法前的角塊位置</h2>
 RU組pair轉法要不破壞已做好的2個pair，須先將已做好的2個pair的角塊與要組新pair的邊塊連結於U面，並將要組新pair的邊塊於U面旋轉至RU組pair轉法的起始點那邊。
 <p>
-要組新pair的角塊與舊pair的相對位置會影響使用RU組pair轉法後，UFL, UFR, DFR位置的同向性
+要組新pair的角塊與舊pair的相對位置會影響使用RU組pair轉法後，UFL, UFR, DFR位置角塊的同向性
 <p>
-上面的敍述就是下面這三個RU組pair轉法的起始位置，
+總之上面的敍述就是下面這三種圖形，
 <span class="pu">&emsp;</span>那個就是要組新pair的角塊，就是原本顏色為<span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>的那個角塊
 <p>
-<div class="hor">
-  角塊起始位置於DRB<br>
-  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2'|flags=startsolved showalg">圖1</div>
-</div>
-<div class="hor">
-  角塊起始位置於DRF<br>
-  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2' U R U'|flags=startsolved showalg">圖2</div>
-</div>
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2'|flags=startsolved showalg">圖5</div>
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2' U R U'|flags=startsolved showalg">圖6</div>
 <div class="hor" style="width:410px">
-  角塊起始位置於URB<br>
-  下面兩種只差1個旋轉U，所以在RU組pair轉法視為同一種<br>
-  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2' U R2 U'|flags=startsolved showalg">圖3</div>&equiv;
-  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2' U R2|flags=startsolved showalg">圖4</div>
+  下面兩個圖形只差1個旋轉U，所以在RU組pair轉法視為同一種<br>
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2' U R2 U'|flags=startsolved showalg">圖7</div>&equiv;
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|setupmoves=U2' U R2|flags=startsolved showalg">圖8</div>
 </div>
 <p>
-下面為角塊起始位置轉換的轉動，其他情況可增加第2個轉R的旋轉次數
-<p>
-<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|alg=U R U'|setupmoves=U2'|flags=startsolved showalg">轉動1</div>
-
-<h2>預先需要學會的轉動</h2>
-<span class="iwx">X</span>的部份為之前已做好的2個pair
-<p>
+要轉成上面的圖形須先學會下面的轉動，<span class="iwx">X</span>的部份為之前已做好的2個pair
 <div class="hor">
-  將要組新pair的邊塊轉到與兩個已做好的pair同一面，但不連結這兩個pair。你可以視新pair邊塊的原始位置情形來增加第2個轉R的轉動次數<br>
-  <div class="roofpig rp180" data-config="colored=DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R U'|setupmoves=U' R2 U R U' R U R2'|flags=startsolved showalg">轉動2</div>
+  將要組新pair的邊塊轉到連結兩個已做好pair的角塊。其實完成這個轉動後，在不破壞這個連結下將各角塊歸位，是不會改變各角塊的扭轉方向，所以看角塊的扭轉方向是否相同可以先不理會那個要組新pair的邊塊位置
+  <br>
+  你可以視新pair邊塊的原始位置情形來增加第2個轉R的轉動次數
+  <br>
+  <div class="roofpig rp180" data-config="colored=DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R U' R2 U2' R2' U2' R2 U2'|setupmoves=U' R2 U R U' R U R2'|flags=startsolved showalg">轉動1</div>
 </div>
 <div class="hor">
-  將要組新pair的邊塊轉到連結兩個已做好pair的角塊。其實這個轉動在不破壞這個連結下各角塊歸位後，是不會改變各角塊的扭轉方向，所以看角塊的扭轉方向是否相同可以先不理會那個要組新pair的邊塊位置<br>
-  <div class="roofpig rp180" data-config="colored=DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=R2 U2' R2' U2' R2 U2'|setupmoves=U' R2 U R U' R U R2' U' R U'|flags=startsolved showalg">轉動3</div>
-</div>
-<div class="hor">
-  這個轉動會在不破壞已做好的兩個pair下，皆順時針扭轉UFL, UFR, DFR那三個角塊一次<br>
-  <div class="roofpig rp180" data-config="colored=UFR UFL DRF DRB|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=R U2 R' U2' R U R' U|flags=startsolved showalg">轉動4</div>
+  下面為角塊起始位置轉換的轉動，其他情況可增加第2個轉R的旋轉次數
+  <br>
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:purple|tweaks=DR:UB F:DRB|alg=U R U'|setupmoves=U2'|flags=startsolved showalg">轉動2</div>
 </div>
 
 <h2>用RU組pair轉法組第3個「好」pair</h2>
 
-要觀察角塊的扭轉方向必須先將所有角塊歸位歸好，當然在歸位時你不能破壞已做好的2個pair。歸位好後，這裡依照要組新pair角塊的扭轉方向給出3個case。角塊歸位好觀察完後，到使用RU組pair轉法前的角塊起始位置，則可視狀況使用轉動2，轉動3及轉動1。而<span class="ibx">X</span>表示位於UFL, UFR, DFR的同向角塊
+要觀察角塊的扭轉方向必須先將所有角塊歸位歸好，當然在歸位時你不能破壞已做好的2個pair。歸位好後，這裡依照要組新pair角塊的扭轉方向給出3個case。角塊歸位好觀察完後，轉到使用RU組pair轉法前的角塊位置，則可視狀況使用轉動1，轉動2。而<span class="ibx">X</span>表示位於UFL, UFR, DFR的同向角塊
 <dl>
   <dt>case1:所有角塊歸位後，要組合的pair角塊，其和邊塊相同的兩個顏色<span class="gr">&emsp;</span><span class="wh">&emsp;</span>都沒在R面，UFR, DFR兩角塊方向相同</dt>
   <dd>
-  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:DFR RBD:DRB|flags=startsolved showalg"></div>
-  <p>
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:DFR RBD:DRB|flags=startsolved showalg">圖9</div>
   <div class="hor">
-    要組合的pair其邊塊已連接兩個已做好pair的角塊，可用角塊起始位置於DRF的RU組pair轉法<br>
-    <div id="roof" class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB RBD:DRB|alg=U2' R2'|setupmoves=U' R U'|flags=startsolved showalg"></div>
-  </div>
-  <div class="hor">
-    要組合的pair其邊塊在U面卻沒連接兩個已做好pair的角塊<br>
-    <div id="roof" class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UF RBD:DRB|alg=U2' R'|flags=startsolved showalg"></div>
+    <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB RBD:DRB|alg=U2' R2'|setupmoves=U' R U'|flags=startsolved showalg">轉動3</div>
   </div>
   </dd>
   <dt>case2:所有角塊歸位後，要組合的pair角塊，其扭轉方向正確，UFL, UFR, DFR三角塊方向皆相同</dt>
   <dd>
-  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:UFL X:DFR DRB:DRB|flags=startsolved showalg"></div>
-  <p>
-    <div class="hor">
-      角塊起始位置於DRB的RU組pair轉法<br>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB DRB:DRB|alg=R3 U R U R|setupmoves=U2'|flags=startsolved showalg"></div>
+  <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:UFL X:DFR DRB:DRB|flags=startsolved showalg">圖10</div>
+    <div class="hors">
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB DRB:DRB|alg=R3 U R U R|setupmoves=U2'|flags=startsolved showalg">轉動4</div>
     </div>
-    <div class="hor">
-      角塊起始位置於DRF的RU組pair轉法<br>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB DRB:DRB|alg=R2 U R U R|setupmoves=U' R U'|flags=startsolved showalg"></div>
-    </div>
+    <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB DRB:DRB|alg=R2 U R U R|setupmoves=U' R U'|flags=startsolved showalg">轉動5</div>
   </dd>
   <dt>case3:所有角塊歸位後，要組合的pair角塊，其扭轉方向不是case1，也不是case2，即<span class="wh">&emsp;</span>色在R面</dt>
   <dd>
@@ -109,30 +85,27 @@ RU組pair轉法要不破壞已做好的2個pair，須先將已做好的2個pair�
       UFL, UFR兩角塊方向相同:
       </dt>
       <dd>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:UFR BDR:DRB|flags=startsolved showalg"></div>
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:UFR BDR:DRB|flags=startsolved showalg">圖11</div>
       <div class="hor">
-        角塊起始位置於DRB的RU組pair轉法<br>
-        <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB BDR:DRB|alg=R3 U R' U R2|setupmoves=U2'|flags=startsolved showalg"></div>
+        <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB BDR:DRB|alg=R3 U R' U R2|setupmoves=U2'|flags=startsolved showalg">轉動6</div>
       </div>
       </dd>
       <dt>
       UFL, DFR兩角塊方向相同:
       </dt>
       <dd>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:DFR BDR:DRB|flags=startsolved showalg"></div>
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:DFR BDR:DRB|flags=startsolved showalg">圖12</div>
       <div class="hor">
-        角塊起始位置於URB的RU組pair轉法<br>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB BDR:DRB|alg=R U R|setupmoves=U' R2|flags=startsolved showalg"></div>
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB BDR:DRB|alg=R U R|setupmoves=U' R2|flags=startsolved showalg">轉動7</div>
       </div>
       </dd>
       <dt>
       UFR, DFR兩角塊方向相同: 這個轉動步數比較多，如果要組的新pair的邊塊沒有恰好連結兩個已做好的pair的角塊，可以不需要用
       </dt>
       <dd>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:DFR BDR:DRB|flags=startsolved showalg"></div>
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:DFR BDR:DRB|flags=startsolved showalg">圖13</div>
       <div class="hor">
-        角塊起始位置於DRF的RU組pair轉法<br>
-      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB BDR:DRB|alg=R2 U R2 U R U R' U' R U' R2'|setupmoves=U' R U'|flags=startsolved showalg"></div>
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=DR:UB BDR:DRB|alg=R2 U R2 U R U R' U' R U' R2'|setupmoves=U' R U'|flags=startsolved showalg">轉動8</div>
       </div>
       </dd>
     </dl>
@@ -140,14 +113,21 @@ RU組pair轉法要不破壞已做好的2個pair，須先將已做好的2個pair�
 </dl>
 
 <h2>天啊！我在上面3個case中找不到我的同向角塊狀況</h2>
+
+須先學會下面這個轉動
+<p>
+在不破壞已做好的兩個pair下，皆順時針扭轉UFL, UFR, DFR那三個角塊一次
+<br>
+  <div class="roofpig rp180" data-config="colored=UFR UFL DRF DRB|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=R U2 R' U2' R U R' U|flags=startsolved showalg">轉動9</div>
+
 <dl>
-<dt>若是在位置UFL, UFR, DFR上找得到兩個同向角塊，下面的轉動5用X來表示那兩個同向角塊，這個轉動5一開始是上面3個case所沒有的，則將那兩個同向角塊連同要組合新pair的那個角塊一同轉入UFL, UFR, DFR的位置，然後做一次轉動4，一起扭轉那三個角塊，就可進入用RU組pair轉法的3個case中。其他情況可增加第2個轉R的旋轉次數</dt>
+<dt>若是在位置UFL, UFR, DFR上找得到兩個同向角塊，下面的轉動10用X來表示那兩個同向角塊，這個轉動10一開始是上面3個case所沒有的，則將那兩個同向角塊連同要組合新pair的那個角塊一同轉入UFL, UFR, DFR的位置，然後做一次轉動9，一起扭轉那三個角塊，就可進入用RU組pair轉法的3個case中。其他情況可增加第2個轉R的旋轉次數</dt>
 <dd>
-<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:UFR RBD:DRB|alg=U' R' U|flags=startsolved showalg">轉動5</div>
+<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:UFR RBD:DRB|alg=U' R' U|flags=startsolved showalg">轉動10</div>
 </dd>
-<dt>若是在位置UFL, UFR, DFR上找不到兩個同向角塊，要組新pair的角塊一定是扭轉方向正確。則將下面<span class="sa">&emsp;</span>色的那兩個角塊連同要組合新pair的那個角塊一同轉入UFL, UFR, DFR的位置，然後做一次轉動4，一起扭轉那三個角塊，就可進入用RU組pair轉法的case3中</dt>
+<dt>若是在位置UFL, UFR, DFR上找不到兩個同向角塊，要組新pair的角塊一定是扭轉方向正確。則將下面<span class="sa">&emsp;</span>色的那兩個角塊連同要組合新pair的那個角塊一同轉入UFL, UFR, DFR的位置，然後做一次轉動9，一起扭轉那三個角塊，就可進入用RU組pair轉法的case3中</dt>
 <dd>
-<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:salmon|tweaks=DRB:DRB F:UFR F:DFR|alg=U' R2 U|flags=startsolved showalg">轉動6</div>
+<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:salmon|tweaks=DRB:DRB F:UFR F:DFR|alg=U' R2 U|flags=startsolved showalg">轉動11</div>
 </dd>
 </dl>
 
@@ -159,11 +139,10 @@ RU組pair轉法要不破壞已做好的2個pair，須先將已做好的2個pair�
 <div class="hor">
   左邊範例為UFL, DFR兩角塊方向相同，
   <ul>
-  <li>第1~3轉為轉動5</li>
-  <li>第4~11轉為轉動4，進入RU組pair轉法的case2</li>
-  <li>第12~14轉為轉動2</li>
-  <li>第15~20轉為轉動3</li>
-  <li>第21~25轉為角塊起始位置於DRB的RU組pair轉法</li>
+  <li>第1~3轉為轉動10</li>
+  <li>第4~11轉為轉動9，進入RU組pair轉法的case2</li>
+  <li>第12~20轉為轉動1</li>
+  <li>第21~25轉為轉動4</li>
   </ul>
 </div>
 <p>
@@ -171,12 +150,11 @@ RU組pair轉法要不破壞已做好的2個pair，須先將已做好的2個pair�
 <div class="hor">
   左邊範例為UFL, UFR, DFR三角塊方向全部不同
   <ul>
-  <li>第1~3轉為轉動6</li>
-  <li>第4~11轉為轉動4，進入RU組pair轉法的case3的UFL, DFR兩角塊方向相同</li>
-  <li>第12~14轉為轉動2</li>
-  <li>第15~20轉為轉動3</li>
-  <li>第21~22轉調整RU組pair轉法的角塊起位置於URB</li>
-  <li>第23~25轉為角塊起始位置於URB的RU組pair轉法</li>
+  <li>第1~3轉為轉動11</li>
+  <li>第4~11轉為轉動9，進入RU組pair轉法的case3的UFL, DFR兩角塊方向相同</li>
+  <li>第12~20轉為轉動1</li>
+  <li>第21~22轉調整RU組pair轉法前的角塊位置，為轉動2</li>
+  <li>第23~25轉為轉動7</li>
   </ul>
 </div>
 
