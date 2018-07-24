@@ -6,7 +6,9 @@ body {
 
 div.hor {width:320px; padding-left:48px; display:inline-block;}
 div.hors {width:180px; padding-left:48px; display:inline-block;}
-.rp180 {width:180px;}
+div.horh {padding-right:48px; display:inline-block;}
+div.horm {width:240px; padding-left:48px; display:inline-block;}
+.rp180 {width:140px;}
 .roofpig {display:inline-block;}
 
 .bl {padding:0 2px 0 2px; background-color:#09f;}
