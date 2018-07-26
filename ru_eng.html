@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>Reducing to R, U face rotations group</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="cube.css"/>
+</head>
+<body>
+
+<h1>Reducing to R, U face rotations group</h1>
+
+<h2>Foreword</h2>
+Here is a way to send back all other non-R, U face rotations, so after that you only can use the U, R face rotations to complete the cube, so that the RUP method can be a reducing group method, and this method should be simple and easy to use.
+
+<h2>Bad edge, good edge</h2>
+Only rotate U, R face will have bad edge, good edge. The so-called bad edge is that you only rotate R, U face can never twist this edge right. The so-called good edge is that you only rotate R, U face can twist this edge right.
+<p>
+To twist the bad edge into a good edge, turn the 2 bad edge with rotating R, U face only, to the position of the two edge of <span class="re">&emsp;</span> figure in Fig. 1 below, and then do the Move 1, F R' F', then these two bad edges are turned into good edges.
+<p>
+
+Unless there is no bad edges, do it until there will be only 2 bad edges left.
+<p>
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UR F:UF|flags=startsolved showalg">Fig. 1</div>
+<div class="roofpig rp180" data-config="colored=UR- U R|solved=UR-/ce|tweaks=R:Uf U:uR|alg=F R' F'|flags=startsolved showalg">Move 1</div>
+
+<h2>Find the Alien Line</h2>
+Now the face D is <span class="wh">&emsp;</span>, first turn the two corners with <span class="wh">&emsp;</span> to the two positions DRF, DRB, who is in the position DRF or who is in the position DRB does not matter. Because the face U is <span class="ye">&emsp;</span>, the remaining four corners do not consider <span class="ye">&emsp;</span>, and only consider the other colors. If it is found that two adjacent corners have the same non-<span class="ye">&emsp;</span> color, assume it is <span class="re">&emsp;</span>, we use the U face rotation to turn the two corners to the <span class="re">&emsp;</span> side, as in the following Example 1, you will found that the positions of the adjacent two corners with <span class="wh">&emsp;</span> are exchanged with each other. The two corners with <span class="re">&emsp;</span> adjacent on the <span class="ye">&emsp;</span> face are in the correct position, and the two rest corners on the <span class="ye">&emsp;</span> face are just swapped with each other. The X symbol indicates that the two adjacent corners positions are exchanged with each other, and no X symbol indicates that the two adjacent corners are in the correct position.
+<p>
+There will be three lines, two of which are exchanged, and one is different from the other two, the position of the corners on this line is correct, not exchanged. The line that is different from the other two is the Alien Line. The two corners in the Alien Line are what we are searching for. In the following Example 1, position UFL, UFR are the two corners.
+<p>
+<div class="roofpig rp180" data-config="colored=B L F U R D ULF ULB URF URB DRF DRB|solved=UR-/ce|tweaks=X:DRF X:DRB X:ULB X:URB|setupmoves=U' F R' F' U R' U2">Example 1</div>
+
+<h2>Some examples of Alien Line</h2>
+In the following, the corners of the same color have an X symbol indicating that the two adjacent corners positions are exchanged with each other, and no X symbol indicates that the two adjacent corners are in the correct position, and each Example has three lines of the same color. The excahnged situation of position of the corners in one of the sections is different from the other two. The following is indicated by <span class="ye">&emsp;</span>. This is the Alien Line we are searching for.
+<p>
+If there is no <span class="ye">&emsp;</span>, it means there is no Alien Line.
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=R:DFR R:DBR U:UFR U:UBR X:UFR X:UBR B:UFL B:UBL">Example 2</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=U:DFR U:DBR R:UFR R:UBR X:UFR X:UBR B:UFL B:UBL X:UFL X:UBL">Example 3</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=R:DFR R:DBR X:DFR X:DBR B:UFR B:UFL X:UFR X:UFL U:UBR U:UBL">Example 4</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=U:DFR U:DBR X:DFR X:DBR R:UFR R:UBR B:UFL B:UBL">Example 5</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=L:DFR L:DBR X:DFR X:DBR R:UFR R:UBR X:UFR X:UBR B:UFL B:UBL X:UFL X:UBL">Example 6</div>
+
+<h2>Return other non-R, U face rotations</h2>
+
+<dl>
+<dt>There are 2 bad edges left, and there are also Alien Line.</dt>
+<dd>
+The following four optional ones can be completed. Turn the two corners on the Alen Line and the remaining two bad edges with only R, U face rotations to the lower <span class="re">&emsp;</span> position, and will send back other non-R, U face rotations according to the description.
+<p>
+<div class="hors">
+   Use the sequence F R ' F ' to solve<br>
+   <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:UF|alg=F R' F'|flags=startsolved showalg">Move 2</div>
+</div>
+<div class="hors">
+   Use the sequence F' U F to solve<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:RF|alg=F' U F|flags=startsolved showalg">Move 3</div>
+</div>
+<div class="hors">
+   Use the sequence B' R B to solve<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:UB|alg=B' R B|flags=startsolved showalg">Move 4</div>
+</div>
+<div class="hors">
+   Use the sequence B U' B' to solve<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:RB|alg=B U' B'|flags=startsolved showalg">Move 5</div>
+</div>
+</dd>
+<dt>2 bad edges left, but Alien Line</dt>
+<dd>
+Turn the two bad edges with the R, U face ratations only, to the <span class="re">&emsp;</span> position below, and will send back other non-R, U faces ratations with the sequence F R2 U R U' F'.
+<p>
+   <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UR F:UF|alg=F R2 U R U' F'|flags=startsolved showalg">Move 6</div>
+</dd>
+<dt>No bad edges, but there are Alien Line</dt>
+<dd>
+Turn the two corners on the Alien Line with only the R, U face rotaions to the <span class="re">&emsp;</span> position below, and will send back the other non-R, U face rotations with the sequence F R' U R U' F'.
+<p>
+   <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UBL F:UBR|alg=F R' U R U' F'|flags=startsolved showalg">Move 7</div>
+</dd>
+<dt>No bad edges, no Alen Line</dt>
+<dd>
+Has already completed sending back other non-R, U face rotations.
+</dd>
+</dl>
+
+
+<h2>Can replace the corners in the Alien Line</h2>
+
+If <span class="ye">&emsp;</span> indicates an Alien Line, in fact you can not only use the two corners in the Alien Line.
+<p>
+According to the position of the <span class="ye">&emsp;</span>, you can see that the figure below matches the position of your Alien Line.
+<p>
+Replacing the two corners of Alien Line with the other two corners of the same color will also have the reducing group effect.
+<p>
+There are alternative corners that will make it easier to combine the bad edges only with R, U face rotations.
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFR U:UBR D:DFR D:UFL B:UBL B:DBR">Fig. 2</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:DFR U:DBR D:UFR D:UBL B:UFL B:UBR">Fig. 3</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UBR U:UBL D:UFR D:DFR B:UFL B:DBR">Fig. 4</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFR U:UFL D:UBR D:DBR B:UBL B:DFR">Fig. 5</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFL U:UBL D:UFR D:DBR B:UBR B:DFR">Fig. 6</div>
+<p>
+As shown in the following Example 7, the Alen Line position will be in UFL, UFR, according to this position, the color of Fig. 5 above is just in these two positions. According to Fig. 5 above, you can use the two corners of position ULB, DRF, or two corners of position URB, DRB to replace the two corners in the original Alien Line
+<p>
+The two corners at position URB, DRB have already just connected a bad edge, so we use the two corners at position URB, DRB will be better than the original two corners.
+<p>
+
+
+<div class="roofpig rp180" data-config="colored=B L F U R D UR*|solved=UR-/ce|alg=R' B' R B|setupmoves=U' F R' F' U R' U2 U F R2 U R U' F' R2 U2 R U R' U R2|flags=startsolved showalg">Example 7</div>
+<div class="hor">
+  <ul>
+  <li>The first turn is the state before the Move 4</li>
+  <li>The 2~4th turns is the Move 4</li>
+  </ul>
+</div>
+
+<p>
+next: <a href="2pairs_eng.html">complete 2 pairs</a> <a href="index_eng.html">The RUP Method</a>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+<script src="jquery.min.js"></script>
+<script src="roofpig_and_three.min.js"></script>
+
+</body>
+</html>

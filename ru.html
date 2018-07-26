@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-	<title>RUP method</title>
+	<title>降群為R, U面旋轉</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <link rel="stylesheet" href="cube.css"/>
@@ -16,7 +16,7 @@
 <h2>壞邊塊、好邊塊</h2>
 只旋轉U, R面就會有壞邊塊、好邊塊的分別。所謂壞邊塊就是你只轉R, U面旋轉永遠無法將這個邊塊扭轉成正確的方向。所謂好邊就是你只轉R, U面旋轉就可以將這個邊塊扭轉成正確的方向
 <p>
-要轉壞邊塊成好邊塊，將2個壞邊塊只用R, U面旋轉轉到下圖1<span class="re">&emsp;</span>色這兩個角塊位置，然後用轉動1，F R' F'這個轉動就可以將這2個壞邊塊轉成好邊塊
+要轉壞邊塊成好邊塊，將2個壞邊塊只用R, U面旋轉轉到下圖1<span class="re">&emsp;</span>色這兩個邊塊位置，然後用轉動1，F R' F'這個轉動就可以將這2個壞邊塊轉成好邊塊
 <p>
 除非原本就沒有壞邊，否則先轉到只剩下2個壞邊
 <p>
@@ -25,7 +25,7 @@
 
 <h2>尋找異線</h2>
 
-現在D面是<span class="wh">&emsp;</span>色的，先將有<span class="wh">&emsp;</span>色的2個角塊轉到DRF, DRB這兩個位置，誰在位置DRF或誰在位置DRB並沒有關係。因為U面是<span class="ye">&emsp;</span>色的，所以剩下4個角塊都不考慮<span class="ye">&emsp;</span>色，只觀看其他顏色。如果發現有相鄰的2個角塊有相同非<span class="ye">&emsp;</span>色的其他顏色，假如是<span class="re">&emsp;</span>色，我們就用U面旋轉將這2個角塊皆轉到<span class="re">&emsp;</span>色那一面，就像是下面範例1，你會發現都有白色的相鄰兩個角塊位置互為交換，<span class="ye">&emsp;</span>面上有<span class="re">&emsp;</span>色相鄰的這2個角塊位置正確，<span class="ye">&emsp;</span>面剩下那兩個角塊則剛好位置互為交換，這裡用X符號表示這2個相鄰的角塊位置互為交換，沒有X符號表示這2個相鄰的角塊位置正確
+現在D面是<span class="wh">&emsp;</span>色的，先將有<span class="wh">&emsp;</span>色的2個角塊轉到DRF, DRB這兩個位置，誰在位置DRF或誰在位置DRB並沒有關係。因為U面是<span class="ye">&emsp;</span>色的，所以剩下4個角塊都不考慮<span class="ye">&emsp;</span>色，只觀看其他顏色。如果發現有相鄰的2個角塊有相同非<span class="ye">&emsp;</span>色的其他顏色，假如是<span class="re">&emsp;</span>色，我們就用U面旋轉將這2個角塊皆轉到<span class="re">&emsp;</span>色那一面，就像是下面範例1，你會發現都有<span class="wh">&emsp;</span>色的相鄰兩個角塊位置互為交換，<span class="ye">&emsp;</span>面上有<span class="re">&emsp;</span>色相鄰的這2個角塊位置正確，<span class="ye">&emsp;</span>面剩下那兩個角塊則剛好位置互為交換，這裡用X符號表示這2個相鄰的角塊位置互為交換，沒有X符號表示這2個相鄰的角塊位置正確
 <p>
 這裡會有3條線，其中2條中的角塊位置是互為交換的，而有1條跟其他2條不一樣，這條中角塊的位置是正確的，而不是互為交換的，那條跟其他2條不一樣的線就是異線，異線中的那2個角塊就是我們要找的，在下面範例1中就是UFL, UFR這兩個角塊
 <p>
@@ -84,9 +84,11 @@
 </dd>
 </dl>
 
-<h2>可替代異線上角塊</h2>
+<h2>可以替代異線上角塊</h2>
 
-如果<span class="ye">&emsp;</span>色表示異線，事實上你不只可以找異線中那兩個角塊，可以跟據<span class="ye">&emsp;</span>色的位置看下面那張圖符合你的位置，用其他相同顏色的那兩個角塊來取代<span class="ye">&emsp;</span>色的那兩個角塊來進行原本異線該進行的工作，也會有降群的效果
+如果<span class="ye">&emsp;</span>色表示異線，事實上你不只可以找異線中那兩個角塊
+<p>
+可以跟據<span class="ye">&emsp;</span>色的位置看下面那張圖符合你異線的位置，用其他相同顏色的那兩個角塊來取代異線上的那兩個角塊，也會有降群的效果
 <p>
 有可替代異線上的角塊會讓你在只能用R, U面旋轉組合壞邊塊時更加的方便
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFR U:UBR D:DFR D:UFL B:UBL B:DBR">圖2</div>
@@ -95,9 +97,9 @@
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFR U:UFL D:UBR D:DBR B:UBL B:DFR">圖5</div>
 <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFL U:UBL D:UFR D:DBR B:UBR B:DFR">圖6</div>
 <p>
-如下面範例7，異線位置會在UFL, UFR，跟據這個位置找到上面圖5的<span class="ye">&emsp;</span>色恰好在這兩個位置，依據上面圖5可以用<span class="ye" style="background-color:pink;">&emsp;</span>色的ULB, DRF那兩個角塊，或是<span class="wh">&emsp;</span>色的URB, DRB那兩個角塊來取代原本異線中那兩個角塊
+如下面範例7，異線位置會在UFL, UFR，跟據這個位置找到上面圖5的<span class="ye">&emsp;</span>色恰好在這兩個位置，依據上面圖5可以用位於ULB, DRF那兩個角塊，或是位於URB, DRB那兩個角塊來取代原本異線中那兩個角塊
 <p>
-而<span class="wh">&emsp;</span>色那2個角塊早已剛好連結個壞邊塊，所以我們用<span class="wh">&emsp;</span>色那兩個角塊會比原來的<span class="ye">&emsp;</span>那兩個角塊好用
+而位於URB, DRB那2個角塊早已剛好連結個壞邊塊，所以我們用位於URB, DRB那兩個角塊會比原來的那兩個角塊來得好用
 <p>
 <div class="roofpig rp180" data-config="colored=B L F U R D UR*|solved=UR-/ce|alg=R' B' R B|setupmoves=U' F R' F' U R' U2 U F R2 U R U' F' R2 U2 R U R' U R2|flags=startsolved showalg">範例7</div>
 <div class="hor">
@@ -108,7 +110,7 @@
 </div>
 
 <p>
-下一步：<a href="2pairs.html">完成2個pairs</a> <a href="index.html">總目錄</a>
+下一步：<a href="2pairs.html">完成2個pairs</a> <a href="index.html">RUP解法</a>
 <p>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">魔術方塊的RUP解法</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://www.facebook.com/presleykimo" property="cc:attributionName" rel="cc:attributionURL">吳宗諺</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>釋出。
 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>Complete the third pair</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="cube.css"/>
+</head>
+<body>
+
+<h1>Complete the third pair</h1>
+
+<h2>Foreword</h2>
+<p>
+Now let's make the third pair, which is the pair with the color in Fig. 1. The explanation here is that the color of the corner is <span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>, and the color of the edge is <span class="gr">&emsp;</span><span class="wh">&emsp;</span>. The part of <span class="iwx">X</span> is the 2 pairs that have been made before. All the rotations of this step only rotate the R, U faces, and do not destroy the 2 pairs that have been completed in the previous steps.
+<p>
+When doing this pair, it is not like the previous two. You can not make this pair casually. If it is not done well, it cannot be completed the cube without destroying the three pairs. This pair is well done in fact, it is related to whether the twisting orientation of the three corners of position UFL, UFR, DFR which are not used in Figure 1 below are the same orientation.
+<div class="roofpig rp180" data-config="colored=DRB DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|flags=startsolved showalg">Fig. 1</div>
+
+<h2>What is the same orientation of twisting of the corners?</h2>
+Under the situation of the corners are homing, the two corners have the same twisting orientation is that, when the vertices of the corner face you, the number of times the corner can be twisted to the correct orientation by the vertex are the same. But this is not easy to judge. Now the three corners we want to judge are just on the same face after homing, so we can judge by the color of that face. Here the color is <span class="re">&emsp;</span>.
+<p>
+You can see the three corners of position UFL, UFR, and DFR in the following examples. Only rotate the <span class="re">&emsp;</span> face. If the <span class="re">&emsp;</span> on the two corners can be rorated to the same position, we say that the two corners have the same twisting orientation. The following examples shows that and the <span class="re">X</span> symbols are the same orientation corner.
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|tweaks=X:uFl X:uFr|setupmoves=U2' R' U2 R U2' R' U' R U">Example 1</div>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|tweaks=X:uFr X:dFr|setupmoves=U' R2' U R U2 R' U2' R U R' R2 U">Example 2</div>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|tweaks=X:uFl X:dFr|setupmoves=R U2 R' U2' R U R' U R U2 R' U2' R U2 R U2 R' U2' R U R2' U">Example 3</div>
+<h2>What is the third "good" pair?</h2>
+In fact, if you only rotate the U, R face without destroying the third pair, after all the corners are homing, it is impossible to change the same situation of twisting orientation of the unused position UFL, UFR, DFR corners to each other. After the third pair is done, after all the corners are homing, the three corners that are not used must all be in the same orientation. It is completely one of the following three situations.
+<p>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|flags=startsolved showalg">Fig. 2</div>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg">Fig. 3</div>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg">Fig. 4</div>
+
+<h2>Combine 3rd "good" pair</h2>
+
+To observe the twisting orientation of the corners, you must first homing all the corners. Of course, you cannot destroy the two pairs that have been made when you home the corners. After homing, here are three cases according to the twisting orientation of the new pair of corners. The <span class="ibx">X</span> indicates the same twisting orientation corners in positions UFL, UFR, DFR
+
+<dl>
+  <dt>Case1: After all the corner blocks are homing, the two colors <span class="gr">&emsp;</span><span class="wh">&emsp;</span> of the corner of the pair to be combined as the same as the edge both are not in the R face, and the UFR and DFR are in the same orientation.</dt>
+  <dd>
+  <div class="horh">
+    <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:DFR RBD:DRB|flags=startsolved showalg">Fig. 5</div>
+  </div>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB RBD:DRB|alg=U R2'|setupmoves=U' R|flags=startsolved showalg">Move 1</div>
+  </dd>
+  <dt>Case2: After all the corners are homing, the pair corners to be combined have the correct twisting orientation, and the three corners of the position UFL, UFR, and DFR all twist in the same orientation.</dt>
+  <dd>
+    <div class="horh">
+    <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:UFL X:DFR DRB:DRB|flags=startsolved showalg">Fig. 6</div>
+    </div>
+    <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB DRB:DRB|alg=U' R3 U R U R|setupmoves=U'|flags=startsolved showalg">Move 2</div>
+    <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB DRB:DRB|alg=U' R2 U R U R|setupmoves=U' R|flags=startsolved showalg">Move 3</div>
+  </dd>
+  <dt>Case3: After all the corners are homing, the pair of corners to be combined has a twisting orientation other than case1 or case2, that is, <span class="wh">&emsp;</span> is on the R face.</dt>
+  <dd>
+    <dl>
+      <dt>
+      UFL, UFR two corners are in the same orientation:
+      </dt>
+      <dd>
+      <div class="horh">
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:UFR BDR:DRB|flags=startsolved showalg">Fig. 7</div>
+      </div>
+        <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB BDR:DRB|alg=U' R3 U R' U R2|setupmoves=U'|flags=startsolved showalg">Move 4</div>
+      </dd>
+      <dt>
+      UFL, DFR two corners are in the same orientation:
+      </dt>
+      <dd>
+      <div class="horh">
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:DFR BDR:DRB|flags=startsolved showalg">Fig. 8</div>
+      </div>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB BDR:DRB|alg=R U R|setupmoves=U' R2|flags=startsolved showalg">Move 5</div>
+      </dd>
+      <dt>
+UFR, DFR two corners have the same orientation: This number of move sequence is more. If the edge of the new pair to be combined does not exactly connect the corners of two completed pairs, you do not need to use this one.
+      </dt>
+      <dd>
+      <div class="horh">
+      <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFR X:DFR BDR:DRB|flags=startsolved showalg">Fig. 9</div>
+      </div>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB BDR:DRB|alg=U' R2 U R2 U R U R' U' R U' R2'|setupmoves=U' R|flags=startsolved showalg">Move 6</div>
+      </dd>
+    </dl>
+  </dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<h2>The edge of the new pair is not connected to the corners of the two old pairs.</h2>
+
+With the following move, the twisting orientation of each corner will not be changed, and the edge of the new pair will be turned to connect the corner of the two old pairs.
+<p>
+You can increase the number of the second turn R of the move sequence depending on the original position of the new pair of edge.
+<div class="roofpig rp180" data-config="colored=DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R U' R2 U2' R2' U2' R2|setupmoves=U' R2 U R U' R U R2'|flags=startsolved showalg">Move 7</div>
+
+<h2>My god! I don't have my same orientation condition corners in the above 3 cases.</h2>
+First learn the following move to twist the three corners.
+<p>
+<div class="hor">
+Twist the UFL, UFR, DFR three corners once in a clockwise orientation.
+<br>
+  <div class="roofpig rp180" data-config="colored=UFR UFL DRF DRB|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=R U2 R' U2' R U R' U|flags=startsolved showalg">Move 8</div>
+</div>
+
+<dl>
+<dt>If there are two same twisting orientation corners on the positions UFL, UFR, DFR, the lower Move 9 uses symbol X to indicate that two same orientation corners. This Move 9 is initially not available in the above three cases, then The two same orientation corners are turn to the UFL, UFR, and DFR positions together with the corner to be combined with the new pair. Then, do the Move 8 and the three corners are twisted together to enter the case of combining the good pair. In other cases, the number of the second turn R of move sequence can be increased.</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|tweaks=X:UFL X:UFR RBD:DRB|alg=U' R' U|flags=startsolved showalg">Move 9</div>
+</dd>
+<dt>If there are no same twisting orientation corners on the positions UFL, UFR, DFR, the corner to be combined with the new pair must be in the correct orientation. Then turn the two corners below the <span class="sa">&emsp;</span> together with the corner to be combined with the new pair into the UFL, UFR, DFR position, then do Move 8 and twist this three corners together to enter the Case3 of combining the good pair.</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-|colors=F:salmon|tweaks=DRB:DRB F:UFR F:DFR|alg=U' R2 U|flags=startsolved showalg">Move 10</div>
+</dd>
+</dl>
+
+<h2>Example</h2>
+All of the following examples with X symbols are 2 pairs that have been prepared before.
+<p>
+<div class="roofpig rp180" data-config="solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R U R U2 R' U2' R U R' U U' R' U' R2 U2' R2' U2' R2 U' U' R3 U R U R|setupmoves=U' R U R U2 R' U2' R U R2 U U' R U R U2 R' U2' R U R2 U y z U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' z' y' R2 U2' R2 U2' R2' U2' |flags=startsolved showalg">Example 4</div>
+<div class="hor">
+  The example on the left is position UFL, DFR corners are in the same twisting orientation.
+  <ul>
+  <li>Turn 1~3 is Move 9</li>
+  <li>Turn 4~11 is Move 8 and enter case 2 of combining the good pair</li>
+  <li>Turn 12~19 is Move 7</li>
+  <li>Turn 20~25 is Move 2</li>
+  </ul>
+</div>
+<p>
+<div class="roofpig rp180" data-config="solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R2 U R U2 R' U2' R U R' U U' R2 U' R2 U2' R2' U2' R2 U' R2' R U R|setupmoves=U' R U R U2 R' U2' R U R2 U U' R U R U2 R' U2' R U R2 U U' R' U R U2 R' U2' R U2|flags=startsolved showalg">Exampl 5</div>
+<div class="hor">
+The left side of the example is the twisting orientation of position UFL, UFR, DFR corners are all different
+  <ul>
+  <li>Turn 1~3 is Move 10</li>
+  <li>Turn 4~11 is Move 8, enter the situation of the UFL, DFR two corners have the same twisting orientation in the case3 of the combining the good pair</li>
+  <li>Turn 12~19 is Move 7</li>
+  <li>Turn 20~21 is adjusting the position of the corner before combining the good pair</li>
+  <li>Turn 22~24 to Move 5</li>
+  </ul>
+</div>
+
+<p>
+next: <a href="4pairs_eng.html">Complete the 4th pair</a> <a href="index_eng.html">The RUP Method</a>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+<script src="jquery.min.js"></script>
+<script src="roofpig_and_three.min.js"></script>
+
+</body>
+</html>

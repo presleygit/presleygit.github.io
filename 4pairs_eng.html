@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>Complete the 4th pair</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="cube.css"/>
+</head>
+<body>
+
+<h1>Complete the 4th pair</h1>
+
+<h2>Foreword</h2>
+Now to make the 4th pair, it is one of the two pairs in the figure below. The <span class="iwx">X</span> symbol is the 3 pairs that have been prepared before.
+<p>
+All the rotations of this step only rotate the R, U faces, and do not destroy the 3 pairs that have been completed in the previous steps.
+<div class="roofpig rp180" data-config="colored=URF UF|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB|flags=startsolved showalg">Fig. 1</div>
+<div class="roofpig rp180" data-config="colored=URF RF|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB|flags=startsolved showalg">Fig. 2</div>
+
+<h2>Go to the Relay Station</h2>
+When combine the 4th pair, all the first 3 pairs that have been completed are turned to the same layer first, and the two pairs that are connected to each other must be completely separated when rotating the other face. The shape is as shown in Figure 3 below. . The first 3 pairs that have been completed can be considered the same. The position of the corner to be combined with the new pair will therefore be fixed at the colored position in Figure 3. The shape of the old pair does not change before and after results of the next moves.
+<p>
+For convenience of explanation below, 
+<br>
+the Relay Station M is the <span class="ibx">X</span> symbol position in Fig. 4, and the Relay Station N is the <span class="ibx">X</span> symbol position in Fig. 5.
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR|flags=startsolved showalg">Fig. 3</div>
+<div class="hors">
+Relay Station M
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF X:UL|flags=startsolved showalg">Fig. 4</div>
+</div>
+<div class="hors">
+Relay Station N
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF X:RB|flags=startsolved showalg">Fig. 5</div>
+</div>
+<dl>
+<dt>Go to the Relay Station M</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RF:RB UFR:FDR|alg=R' U R U2' R' U' R|flags=startsolved showalg">Move 1</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FU:RD FRU:FDR|alg=R2 U R2' U2' R2 U' R2'|flags=startsolved showalg">Move 2</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RF:RF UFR:FDR|alg=U R U' R' U' R' U' R U R|flags=startsolved showalg">Move 3</div>
+</dd>
+<dt>Go to the Relay Station N</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF UF:UL FRU:FDR|alg=R' U R U2' R' U' R|flags=startsolved showalg">Move 4</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FU:RF FRU:FDR|alg=R2' U' R2 U R2'|flags=startsolved showalg">Move 5</div>
+</dd>
+</dl>
+<h2>The edge on the Relay Station combine with the corner of new pair</h2>
+<dl>
+<dt>
+On the corner where the new pair is to be combined, the stiker of the same color as the edge to be combined is the stiker with the <span class="sa">X</span> symbol in Fig. 6 below, and must be combined with the edge on the Relay Station N.
+</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=D:salmon|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF D:RB D:FDR X:FdR|flags=startsolved showalg">Fig. 6</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FU:RB FRU:FDR|alg=R2 U|flags=startsolved showalg">Move 6</div>
+</dd>
+<dt>
+On the corner where the new pair is to be combined, the stiker of the same color as the side block to be combined is the stiker with the <span class="sa">X</span> symbol in Fig. 7 below, and must be combined with the edge on the Relay Station M.
+</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=D:salmon|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF D:UL D:FDR X:fDR|flags=startsolved showalg">Fig. 7</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FR:UL UFR:FDR|alg=R2 U R2' U2' R2|flags=startsolved showalg">Move 7</div>
+</dd>
+</dl>
+
+<h2>Example</h2>
+
+<dl>
+<dt>
+In the following Example 1, the color of the edge of the new pair can be <span class="re">&emsp;</span><span class="ye">&emsp;</span>. The stikers of the two colors on the corner where the new pair is to be combined are as shown in Fig. 6, so turn this edge to Relay Station N by Move 2, 4 first, then do Move 6 to combine the new pair
+</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR FU:RD|alg=R2 U R2' U2' R2 U' R2' R' U R U2' R' U' R R2 U|flags=startsolved showalg">Example 1</div>
+<div class="hor">
+  <ul>
+  <li>Turn 1~7 is Move 2</li>
+  <li>Turn 7~14 is Move 4</li>
+  <li>Turn 15~16 is Move 6</li>
+  </ul>
+</div>
+</dd>
+<dt>
+In the following example 2, the color of the edge of the new pair can be <span class="gr">&emsp;</span><span class="re">&emsp;</span>. The stikers of the two colors on the corner where the new pair is to be combined are as shown in Fig. 7, so turn this edge to Relay Station M by Move 3 first, then do Move 7 to combine new pair
+</dt>
+<dd>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FR:FR UFR:FDR|alg=U R U' R' U' R' U' R U R R2 U R2 U2 R2|flags=startsolved showalg">Example 2</div>
+<div class="hor">
+  <ul>
+  <li>Turn 1~10 is Move 3</li>
+  <li>Turn 11~15 is Move 7</li>
+  </ul>
+</div>
+</dd>
+</dl>
+
+<p>
+next: <a href="exblock_eng.html">Expand into 3 pairs and 1 1x2x2 block</a> <a href="index_eng.html">The RUP Method</a>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+<script src="jquery.min.js"></script>
+<script src="roofpig_and_three.min.js"></script>
+
+</body>
+</html>

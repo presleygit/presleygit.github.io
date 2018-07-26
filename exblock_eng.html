@@ -1,88 +1,88 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-	<title>拓展成3個pairs與1個1x2x2區塊</title>
+	<title>Expand into 3 pairs and 1 1x2x2 block</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <link rel="stylesheet" href="cube.css"/>
 </head>
 <body>
 
-<h1>拓展成3個pairs與1個1x2x2區塊</h1>
+<h1>Expand into 3 pairs and 1 1x2x2 block</h1>
 
-<h2>前言</h2>
-接下來其實沒多少轉動可以選擇。要將已做好的其中1個pair拓展成1個1x2x2的區塊，必須是下面有顏色的1x2x2的區塊其中之一。有X符號的部份為之前已做好的4個pair。
+<h2>Foreword</h2>
+In the end, there is actually not many moves to choose from. To expand one of the completed pairs into a 1x2x2 block, it must be one of the colored 1x2x2 blocks below. The part with the X symbol is the 4 pairs that have been prepared before.
 <p>
-這個步驟的所有轉動皆只轉動R, U面，且不破壞之前步驟已做好的4個pair
+All the rotations of this step only rotate the R, U faces, and do not destroy the 4 pairs that have been completed in the previous steps.
 <p>
 <div class="roofpig rp180" data-config="colored=U UL UB ULB UR-|solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 <div class="roofpig rp180" data-config="colored=R DR RB DRB UR-|solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 
-<h2>4個pair拓展出3個pair和1個1x2x2區塊</h2>
-下面<span class="iwx">X</span>的部份為已做好的pair
+<h2>4 pairs expand 3 pairs and 1 1x2x2 block</h2>
+The following <span class="iwx">X</span> part is the completed pair.
 <p>
 
 <div class="hors">
-  組合邊塊與中心塊
+Combining edge and center
   <br>
   <div class="roofpig rp180" data-config="colored=U R UB|solved=UR-|alg=U R2 U' R'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <div class="hors">
-  將邊塊轉出兩舊pair之間
+Turn the edge out between the two old pairs
   <br>
   <div class="roofpig rp180" data-config="colored=U R UB|solved=UR-|alg=R' U2' R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U R U2' R' U2'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在同一層
+The two pairs to combine block are on the same layer
   <br>
   <div class="roofpig rp180" data-config="colored=U R UB UL ULB|solved=UR-|alg=R' U2' R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U U2|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在沒在同一層
+The two pairs to combine the block are not on the same layer
   <br>
   <div class="roofpig rp180" data-config="colored=U R UB UL ULB|solved=UR-|alg=U2' R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U R U2' R' U2' R' U2' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <p>
 
-當然你也可以選擇先組另一個區塊
+Of course, you can also choose to combine another block first.
 <div class="hors">
-  組合邊塊與中心塊
+Combining edge and center
   <br>
   <div class="roofpig rp180" data-config="colored=U R RB|solved=UR-|alg=R' U R U2' R' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <div class="hors">
-  將邊塊轉出兩舊pair之間
+Turn the edge out between the two old pairs
   <br>
   <div class="roofpig rp180" data-config="colored=U R RB|solved=UR-|alg=U R2' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R R' U R U2' R' U' R U R2' U'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在同一層
+The two pairs to combine block are on the same layer
   <br>
   <div class="roofpig rp180" data-config="colored=U R RB DR DRB|solved=UR-|alg=U R2 U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R R' U R U2' R' U' R U R2' U' R2 U' R2 U R2'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在沒在同一層
+The two pairs to combine the block are not on the same layer
   <br>
   <div class="roofpig rp180" data-config="colored=U R RB DR DRB|solved=UR-|alg=R2' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R R' U R U2' R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 </div>
 
-<h2>還原六面</h2>
-當你已依照之前說明拓展成1個1x2x2的區塊及3個pair，在不破壞那1個1x2x2區塊和3個pair的狀況下，接下來就只有一條路可以轉動，順著唯一的那條路就可到全部還原六面的狀態
+<h2>Complete the Cube</h2>
+When you have expanded into 1 1x2x2 block and 3 pairs according to the previous instructions, without destroying that 1x2x2 block and 3 pairs, there is only one way to turn, following that only way can be completed the cube.
 
-<h2>範例</h2>
+<h2>Example</h2>
 <div class="roofpig rp180" data-config="colored=UR*|solved=UR-|alg=U R2 U' R' U' R' U2' R U R U R2 U' R2' U|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF|flags=startsolved showalg"></div>
 <div class="hor">
   <ul>
-  <li>第1~4轉為組合邊塊與中心塊</li>
-  <li>第5~8轉為拓展1x2x2區塊</li>
-  <li>第9~15轉為不破壞原3個pair及那個1x2x2區塊限制下的唯一那條路，順著走便可還原</li>
+  <li>Turn 1~4 is combined edge and center</li>
+  <li>Turn 5~8 is to expand 1x2x2 block</li>
+  <li>Turn 9~15 is the only way that does not destroy the pair and that 1x2x2 block. Follow that way to complete</li>
   </ul>
 </div>
 
 <p>
-<a href="index.html">RUP解法</a>
+<a href="index_eng.html">The RUP Method</a>
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">魔術方塊的RUP解法</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://www.facebook.com/presleykimo" property="cc:attributionName" rel="cc:attributionURL">吳宗諺</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>釋出。
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
 
 <script src="jquery.min.js"></script>
 <script src="roofpig_and_three.min.js"></script>

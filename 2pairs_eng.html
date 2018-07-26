@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>Complete 2 pairs</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="cube.css"/>
+</head>
+<body>
+
+<h1>Complete 2 pairs</h1>
+
+<h2>Foreword</h2>
+If you just reducing group that just rotate R, U faces to the next step, is not enough, we have to let only rotating R, U faces this condition becomes boost, not resistance, then the reducing group will have persuasive. Here we use the pair combined in the R, U layers to further reducing group.
+<p>
+Now I have to do 2 pairs, which are the 2 pairs with the color shown in Fig. 1. All the turns of this step only rotate R, U faces.
+<p>
+<div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-">Fig. 1</div>
+<h2>R U sequence</h2>
+Observe the sequence of the R U below, and the result is that the corners located in the position UFR is twisted once more in the original position, while the edge on the U face is rotated more than 1/4 circle. The U R sequence is similar, except that the corners is twisted at position UBR.
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=BLU:UFR UL:UF|alg=R U|flags=startsolved showalg">Move 1</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|alg=U R|flags=startsolved showalg">Move 2</div>
+<h2>RU combine pair move</h2>
+To combine a pair, first observe the edge, and observe where it will eventually combine the corner, so if you want to combine the pair in Fig. 2, know that its edge will rotate to the F side in the R face to combine.
+<p>
+First use the R face rotation to rotate the edge to the opposite side of the R face as the starting point, that is, the B side, the corner is rotated to the B side of the R, U layer overlap, that is, at URB position and will do U R sequence. If the corner is twisted to the orientation that can be combined with the edge, but the edge is not yet rotated to the destination RF, first rotate the corner with the U face roration and turn away from the R, U layer overlap, so that the corner will not be twisted again, and wait until the edge is rotated to the destination RF with the R face rotation, and then use the U face rotation to turn the corner to the edge for combination, as in Example 1 below.
+<p>
+You can also observe that the corner must be twisted once to combine the edge. Therefore, the edge is first rotated to the DR position that is rotated 1/4 circle from the destination, and the corner is rotated to the URB position and will do U R squence, so that the corner is twisted to the orientation that can be combined with the edge, and the edge is also just arrived at the destination RF, it just happens to be combined. As example 2 below
+<p>
+For the convenience of the subsequent steps, this move method is called "RU combine pair move"
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|setupmoves=U R U2 R U'|flags=startsolved showalg">Fig. 2</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|alg=U R U2 R U'|flags=startsolved showalg">Example 1</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|alg=U R U|setupmoves=U' R U|flags=startsolved showalg">Example 2</div>
+
+<h2>Use RU combine pair move to combine the second pair</h2>
+Observe that the combination position of the second pair's edge and the corner is in the opposite direction to the combination position of the first pair's edge and the corner, so the starting point of the RU combine pair move is also in the opposite direction of the first pair. That is, the starting point of the edge  of the first pair is on the B side, then the starting point of the edge of the second pair is on the F side.
+<p>
+Because you can't destroy the first pair that has just been combined, when you use the RU combine pair move to combine the second pair, you must first turn the pair that has been combined to the U face and connect it with the edge you want to combine. Then, the edge of the new pair is rotated on the U face to the F side as the starting point, and then the RU combine pair move is performed, as in the following Example 3.
+<p>
+In the case of Example 4, the corner must be twisted once to combine the edge. Therefore, first turn the edge to the position UL that needs to be rotated 1/4 circle from the destination, and then perform the RU combine pair move.
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=BLU:UFR UL:UF UBR:UFL RU:LU|alg=R U R' U R2|flags=startsolved showalg">Example 3</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=BLU:UFR UL:UF UBR:UFL RU:LU|alg=R U R|setupmoves=R' U R|flags=startsolved showalg">Example 4</div>
+
+<p>
+next: <a href="3pairs_eng.html">Complete the third pair</a> <a href="index_eng.html">The RUP Method</a>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+<script src="jquery.min.js"></script>
+<script src="roofpig_and_three.min.js"></script>
+
+</body>
+</html>

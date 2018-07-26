@@ -4,6 +4,7 @@ body {
   background-color:#fff;
 }
 
+div.lan {float:right;}
 div.hor {width:320px; padding-left:48px; display:inline-block;}
 div.hors {width:180px; padding-left:48px; display:inline-block;}
 div.horh {padding-right:24px; display:inline-block;}
