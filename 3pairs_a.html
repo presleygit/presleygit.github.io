@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>完成第3個pair (高階)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="cube.css"/>
+</head>
+<body>
+
+<h1>完成第3個pair (高階)</h1>
+
+<h2>前言</h2>
+<p>
+現在要做出第3個pair，也就是下圖1中有顏色的那個pair，在這裡的解說都是以其角塊顏色為<span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>，邊塊顏色為<span class="gr">&emsp;</span><span class="wh">&emsp;</span>。<span class="iwx">X</span>的部份為之前已做好的2個pair。這個步驟的所有轉動皆只轉動R, U面，且不破壞之前步驟已做好的2個pair
+<p>
+做這個pair時就不像之前那2個，不是隨隨便便做出這個pair就可以，做得不好以後在不破壞這3個pair的情形下是無法轉成六面的。這個pair要做得好其實與下圖1中沒用到的位於UFL, UFR, DFR那3個角塊的扭轉方向相不相同有關
+<p>
+<div class="roofpig rp180" data-config="colored=DRB DR|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|flags=startsolved showalg">圖1</div>
+<h2>什麼是角塊扭轉方向相同？</h2>
+你可看到下面範例中UFL, UFR, DFR那3個角塊，都有一面是<span class="re">&emsp;</span>，若只旋轉<span class="re">&emsp;</span>面，其中一角塊上的<span class="re">&emsp;</span>面可轉到與未旋轉前另一個角塊上的<span class="re">&emsp;</span>面完全重疊，我們就說那兩個角塊扭轉方向相同，簡稱同向，下面範例可以看到有打<span class="re">X</span>的都是同向的角塊
+<p>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|tweaks=X:uFl X:uFr|setupmoves=U2' R' U2 R U2' R' U' R U">範例1</div>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|tweaks=X:uFr X:dFr|setupmoves=U' R2' U R U2 R' U2' R U R' R2 U">範例2</div>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|tweaks=X:uFl X:dFr|setupmoves=R U2 R' U2' R U R' U R U2 R' U2' R U2 R U2 R' U2' R U R2' U">範例3</div>
+<p>
+若這三個角塊都沒有同向，在這個情形下還可以分為兩型
+<p>
+其中一型若只旋轉<span class="re">&emsp;</span>面，其中一角塊上的<span class="ye">&emsp;</span>面可轉到與未旋轉前另一個角塊上的<span class="ye">&emsp;</span>面完全重疊，像是下面範例4
+<p>
+另一型若只旋轉<span class="re">&emsp;</span>面，其中一角塊上的<span class="ye">&emsp;</span>面無法轉到與未旋轉前另一個角塊上的<span class="ye">&emsp;</span>面完全重疊，像是下面範例5
+<p>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|setupmoves=U' R2' U R U2 R' U2' R U R' R2 U U2' R' U2' R U2 R' U' R U">範例4</div>
+<div class="roofpig rp180" data-config="colored=UR- U R UFL UFR DFR|solved=UR-/ce|setupmoves=U' R2' U R U2 R' U2' R U R' R2 U U2' R' U2' R U2 R' U' R U U' R2' U R U2 R' U2' R U R' R2 U U2' R' U2' R U2 R' U' R U">範例5</div>
+<h2>什麼是第3個「好」pair？</h2>
+做得好的第3個pair在全部角塊都歸位後，沒有用到的那3個角塊必須全部同向。就完全是下面這三個情形之一。
+<p>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|flags=startsolved showalg">圖2</div>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg">圖3</div>
+<div class="roofpig rp180" data-config="colored=ULB UL URB UR DRB DR UFL UFR DFR UR-|solved=UR-/ce|setupmoves=z x U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' x' z'|flags=startsolved showalg">圖4</div>
+
+<h2>命名與分類</h2>
+
+下面所有的情形，其與其鏡像都視作同一個，用同一個名稱
+<p>
+要組新pair角塊的扭轉方向有3個Case
+<p>
+<div class="horm">
+  Case 1, <span class="or">&emsp;</span>在R面或U面
+  <br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB RBD:DRB|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB RBD:DRB|setupmoves=U' R2' U R2 U2' R' U2 R'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="horm">
+  Case 2, <span class="or">&emsp;</span>在B面
+  <br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DRB:DRB|flags=startsolved showalg"></div>
+  <br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DRB:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="horm">
+  Case 3, <span class="or">&emsp;</span>在D面或L面
+  <br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB BDR:DRB|flags=startsolved showalg"></div>
+  <br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB BDR:DRB|setupmoves=U' R U R2 U2' R' U R'|flags=startsolved showalg">鏡像</div>
+</div>
+
+<p>
+位於UFL, UFR, DFR的同向角塊有6種型。而<span class="ibx">X</span>表示位於UFL, UFR, DFR的同向角塊。<span class="pu">&emsp;</span>表示要組新pair的角塊，即原本顏色為<span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>的那一個角塊。
+<p>
+<div class="hors">
+A型
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFR X:DFR F:DRB|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFR X:DFR F:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+B型
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFL X:UFR F:DRB|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFL X:UFR F:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+C型
+<br>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFL X:DFR F:DRB|flags=startsolved showalg"></div>
+<br>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFL X:DFR F:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+D型
+<br>
+三角塊皆同向
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFR X:UFL X:DFR F:DRB|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB X:UFR X:UFL X:DFR F:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+E型
+<br>
+位於UFL, UFR, DFR沒有同向角塊，且型如範例4
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+F型
+<br>
+位於UFL, UFR, DFR沒有同向角塊，且型如範例5
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=R2 U2' R2'|flags=startsolved showalg">鏡像</div>
+</div>
+<p>
+
+要組新pair的角塊與邊塊的相對位置有5個
+<div class="hors">
+v形
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB DR:UB F:DRB|setupmoves=U'|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULF x:UR x:URF DR:FU F:DRF|setupmoves=z' y2 R|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+w形
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB DR:UF F:DRB|setupmoves=U'|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULF x:UR x:URF DR:BU F:DRF|setupmoves=z' y2 R|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+x形
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB DR:BR F:DRB|setupmoves=U'|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULF x:UR x:URF DR:RF F:DRF|setupmoves=z' y2 R|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+y形
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB DR:FR F:DRB|setupmoves=U'|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULF x:UR x:URF DR:RB F:DRF|setupmoves=z' y2 R|flags=startsolved showalg">鏡像</div>
+</div>
+<div class="hors">
+z形
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB DR:DR F:DRB|setupmoves=U'|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULF x:UR x:URF DR:RD F:DRF|setupmoves=z' y2 R|flags=startsolved showalg">鏡像</div>
+</div>
+
+<h2>一些組第3個「好」pair的轉動</h2>
+
+下面組第3個好pair的轉動也都有一個鏡像，這裡只列出前2個，其餘類推，全都是把旋轉R換成U'，旋轉R'換成U，旋轉U換成R'，旋轉U'換成R
+<table>
+<caption>組pair轉動元素表</caption>
+<tr>
+  <th>
+  </th>
+  <th>
+  v形
+  </th>
+  <th>
+  w形
+  </th>
+  <th>
+  x形
+  </th>
+  <th>
+  y形
+  </th>
+  <th>
+  z形
+  </th>
+</tr>
+<tr>
+  <th>
+  Case 1, A型
+  </th>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB RBD:DRB|alg=U R2'|setupmoves=U' R|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULF x:UR x:URF DR:FU RBD:FRD|alg=R' U2|setupmoves=z' y2 R U'|flags=startsolved showalg">鏡像</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UF RBD:DRB|alg=U' R'|setupmoves=U'|flags=startsolved showalg"></div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULF x:UR x:URF DR:BU RBD:FRD|alg=R U|setupmoves=z' y2 R|flags=startsolved showalg">鏡像</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:BR RBD:DRB|alg=U R U' R|setupmoves=U' R2|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:FR RBD:DRB|alg=U' R2|setupmoves=U' R|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 3, A型
+  </th>
+  <td>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB BDR:DRB|alg=U' R' U2' R|setupmoves=U' R'|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:FR BDR:DRB|alg=U R2' U'|setupmoves=U'|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 3, C型
+  </th>
+  <td>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UB BDR:DRB|alg=U R|setupmoves=U' R'|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+  <td>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:BR BDR:DRB|alg=U R2 U2'|setupmoves=U' R2|flags=startsolved showalg"></div>
+  </td>
+  <td>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:FR BDR:DRB|alg=U'|setupmoves=U' R2|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 2, D型
+  </th>
+  <td>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:UF DRB:DRB|alg=U' R2 U|setupmoves=U' R'|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB DR:FR DRB:DRB|alg=U' R' U|setupmoves=U' R'|flags=startsolved showalg"></div>
+  </td>
+  <td>
+  </td>
+</tr>
+</table>
+
+<h2>鏡射轉動</h2>
+這裡有4種鏡射轉動，每個鏡射轉動都會因為組新pair的角塊一開始的位置有不同的轉動結果，皆可分成3類
+<p>
+<span class="pu">&emsp;</span>表示要組新pair的角塊，即原本顏色為<span class="gr">&emsp;</span><span class="or">&emsp;</span><span class="wh">&emsp;</span>的那一個角塊。
+<table>
+<caption>鏡射轉動表</caption>
+<tr>
+  <th>
+  </th>
+  <th>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U R2 U2' R'|setupmoves=U'|flags=startsolved showalg">鏡射M</div>
+  </th>
+  <th>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R2' U2 R|setupmoves=U'|flags=startsolved showalg">鏡射M'</div>
+  </th>
+  <th>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U R U' R U' R'|setupmoves=U'|flags=startsolved showalg">鏡射N</div>
+  </th>
+  <th>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R' U R' U R|setupmoves=U'|flags=startsolved showalg">鏡射N'</div>
+  </th>
+  <th>
+  轉動結果
+  </th>
+</tr>
+<tr>
+  <th>
+  1類
+  </th>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R2'|flags=startsolved showalg">M1a</div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R'|flags=startsolved showalg">M1b</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R2'|flags=startsolved showalg">M'1a</div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R'|flags=startsolved showalg">M1'b</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R'|flags=startsolved showalg">N1a</div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U'|flags=startsolved showalg">N1b</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R2'|flags=startsolved showalg">N'1a</div>
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R|flags=startsolved showalg">N'1b</div>
+  <td>
+  不改變Case 1，交換Case 2和Case 3
+  <br>
+  不改變C型, 交換A型和B型
+  </td>
+  </td>
+</tr>
+<tr>
+  <th>
+  2類
+  </th>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U'|flags=startsolved showalg">M2</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U'|flags=startsolved showalg">M'2</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R|flags=startsolved showalg">N2</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R'|flags=startsolved showalg">N'2</div>
+  </td>
+  <td>
+  不改變Case 2，交換Case 1和Case 3
+  <br>
+  任何型皆不改變
+  </td>
+</tr>
+<tr>
+  <th>
+  3類
+  </th>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R|flags=startsolved showalg">M3</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R|flags=startsolved showalg">M'3</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U' R2'|flags=startsolved showalg">N3</div>
+  </td>
+  <td>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|setupmoves=U'|flags=startsolved showalg">N'3</div>
+  </td>
+  <td>
+  不改變Case 3，交換Case 1和Case 2
+  <br>
+  不改變A型, 交換B型和C型
+  </td>
+</tr>
+</table>
+上面每個鏡射轉動本身也有鏡像，其與其鏡像都視作同一個，用同一個名稱
+<p>
+下面是鏡射M3的鏡像範例，其餘類推，全都是把旋轉R換成U'，旋轉R'換成U，旋轉U換成R'，旋轉U'換成R
+<p>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULB x:UR x:URB F:DRB|alg=U R2 U2' R'|setupmoves=U' R|flags=startsolved showalg">鏡射M3</div>
+<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=F:purple|tweaks=x:UL x:ULF x:UR x:URF F:DRF|alg=R' U2' R2 U|setupmoves=z' y2 R U'|flags=startsolved showalg">鏡像</div>
+<p>
+下面是使用鏡射M3的範例6，由Case 3, B型轉動到Case 3, C型
+<p>
+<div class="roofpig rp180" data-config="colored=UFR UFL DRF DRB|solved=UR-|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R U R2 U2' R' U R'|setupmoves=U' R' U R U2 R' U2' R U R' U U' R U|flags=startsolved showalg">範例6</div>
+<div class="hor">
+<ul>
+<li>第1~2轉為調整要組新pair的角塊到「鏡射轉動表」中M3的<span class="pu">&emsp;</span>位置</li>
+<li>第3~6轉為鏡射M3</li>
+<li>第7~8轉為檢查是否為Case 3, C型</li>
+</ul>
+</div>
+
+<h2>使用鏡射轉動</h2>
+對照下表，除Case 2, F型會使用2次鏡射，其餘皆使用1次以下就可進入「組pair轉動元素表」內
+<table>
+<caption>使用鏡射對照表</caption>
+<tr>
+  <th>
+  </th>
+  <th>
+  v形
+  </th>
+  <th>
+  w形
+  </th>
+  <th>
+  x形
+  </th>
+  <th>
+  y形
+  </th>
+  <th>
+  z形
+  </th>
+  <th>
+  前往
+  </th>
+</tr>
+<tr>
+  <th>
+  Case 1, A型
+  </th>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  M3
+  </td>
+  <td>
+  Case 2, D型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 1, B型
+  </th>
+  <td>
+  M'1a
+  </td>
+  <td>
+  M1a
+  </td>
+  <td>
+  N1a
+  </td>
+  <td>
+  M1a
+  </td>
+  <td>
+  M'1a
+  </td>
+  <td>
+  Case 1, A型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 1, C型
+  </th>
+  <td>
+  M2
+  </td>
+  <td>
+  M'2
+  </td>
+  <td>
+  M2
+  </td>
+  <td>
+  M'2
+  </td>
+  <td>
+  N2
+  </td>
+  <td>
+  Case 3, C型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 3, A型
+  </th>
+  <td>
+  </td>
+  <td>
+  N'2
+  </td>
+  <td>
+  M'2
+  </td>
+  <td>
+  </td>
+  <td>
+  N2
+  </td>
+  <td>
+  Case 1, A型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 3, B型
+  </th>
+  <td>
+  N'3
+  </td>
+  <td>
+  M'3
+  </td>
+  <td>
+  M3
+  </td>
+  <td>
+  N3
+  </td>
+  <td>
+  M3
+  </td>
+  <td>
+  Case 3, C型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 3, C型
+  </th>
+  <td>
+  </td>
+  <td>
+  M'1a
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  M1a
+  </td>
+  <td>
+  Case 2, D型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 2, D型
+  </th>
+  <td>
+  M'1a
+  </td>
+  <td>
+  </td>
+  <td>
+  N2
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  <td>
+  Case 3, C型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 2, E型
+  </th>
+  <td>
+  M'1a
+  </td>
+  <td>
+  N'1a
+  </td>
+  <td>
+  M'1a
+  </td>
+  <td>
+  M'1b
+  </td>
+  <td>
+  M1b
+  </td>
+  <td>
+  Case 3, A型
+  </td>
+</tr>
+<tr>
+  <th>
+  Case 2, F型
+  </th>
+  <td>
+  M3
+  </td>
+  <td>
+  N'3
+  </td>
+  <td>
+  M'3
+  </td>
+  <td>
+  M'3
+  </td>
+  <td>
+  M3
+  </td>
+  <td>
+  Case 1, B型
+  </td>
+</tr>
+</table>
+
+<h2>範例</h2>
+下面所有範例有X符號的部份為之前已做好的2個pair
+<p>
+
+<div class="roofpig rp180" data-config="solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB|alg=U' U' R2' U2 R U2 R|setupmoves=U' R U R U2 R' U2' R U R2 U U' R U R U2 R' U2' R U R2 U y z U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' U' R U R' U' R U R' U' R U R' y' x' z' y' R2 U2' R2 U2' R2' U2' |flags=startsolved showalg">範例7</div>
+<div class="hor">
+  左邊範例為Case 1, C型, w形，依照「使用鏡射對照表」須使用鏡射M'2，進入Case 3, C型
+  <ul>
+  <li>第1轉為調整要組新pair的角塊到「鏡射轉動表」中M'2的<span class="pu">&emsp;</span>位置</li>
+  <li>第2~5轉為鏡射M'2，進入Case 3, C型, w形</li>
+  <li>第6轉為調整至符合「組pair轉動元素表」中轉動的起始位置</li>
+  <li>第7轉為表中Case 3, C型, w形的轉動</li>
+  </ul>
+</div>
+<p>
+<div class="roofpig rp180" data-config="solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB|alg=U' R2 U' R' U R' U R R' U2' R|setupmoves=U' R U R U2 R' U2' R U R2 U U' R U R U2 R' U2' R U R2 U U' R' U R U2 R' U2' R U2|flags=startsolved showalg">範例8</div>
+<div class="hor">
+  左邊範例為Case 2, E型, w形，依照「使用鏡射對照表」須使用鏡射N'1a，進入Case 3, A型
+  <ul>
+  <li>第1~2轉為調整要組新pair的角塊到「鏡射轉動表」中N'1a的<span class="pu">&emsp;</span>位置</li>
+  <li>第3~8轉為鏡射N'1a，進入Case 3, A型, y形</li>
+  <li>第9~11轉為表中Case3, A型, y形的轉動</li>
+  </ul>
+</div>
+
+<p>
+下一步：<a href="4pairs.html">完成第4個pair</a> <a href="index.html">總目錄</a>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">魔術方塊的RUP解法</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://www.facebook.com/presleykimo" property="cc:attributionName" rel="cc:attributionURL">吳宗諺</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>釋出。
+
+<script src="jquery.min.js"></script>
+<script src="roofpig_and_three.min.js"></script>
+
+</body>
+</html>

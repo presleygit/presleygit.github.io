@@ -16,32 +16,31 @@
 現在要轉出2個pair，也就是下圖1有顏色的那2個pair。這個步驟的所有轉動皆只轉動R, U面
 <p>
 <div class="roofpig rp180" data-config="colored=UL ULB UR URB|solved=UR-">圖1</div>
-<h2>RU轉動</h2>
-觀察下面RU轉動這個轉動動作，結果讓位於UFR的角塊於原處多扭轉一次，而位於U面的邊塊則多旋轉了1/4圈。UR這個動作也類似，只不過角塊於UBR處扭轉。
+
+<h2>組第一個pair</h2>
+下面3個轉動其中一個可以組出第一個pair
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=UR:UR URB:DBR|alg=U R2'|setupmoves=|flags=startsolved showalg">轉動3</div>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=UR:UR URB:BRD|alg=R2' U R U'|setupmoves=|flags=startsolved showalg">轉動15</div>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=UR:UR URB:RDB|alg=R' U|setupmoves=|flags=startsolved showalg">轉動21</div>
 <p>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=BLU:UFR UL:UF|alg=R U|flags=startsolved showalg">轉動1</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|alg=U R|flags=startsolved showalg">轉動2</div>
-<h2>RU組pair轉法</h2>
-要組pair先觀察邊塊，看它最後會在那結合角塊，以如果要組下圖2的那個pair，知道它的邊塊會在R面旋轉至F邊結合
+當然下面3個轉動只是上面3個轉動的鏡像，其中一個也可以組出第一個pair
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=UR:UL URB:BRD|alg=R' U2|setupmoves=R2' U2|flags=startsolved showalg">轉動3</div>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=UR:UL URB:DBR|alg=U2' R' U' R|setupmoves=R2' U2|flags=startsolved showalg">轉動15</div>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=UR:UL URB:RDB|alg=U R'|setupmoves=R2' U2|flags=startsolved showalg">轉動21</div>
+
+<h2>組第二個pair</h2>
+下面3個轉動其中一個可以組出第二個pair，<span class="iwx">X</span>的部份為第一個pair
+<br>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UR x:URB UL:FR LBU:DRB|alg=U' R2|setupmoves=U' R|flags=startsolved showalg">轉動3</div>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UR x:URB UL:FR ULB:DRB|alg=R2 U' R' U|setupmoves=U' R|flags=startsolved showalg">轉動15</div>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UR x:URB UL:FR BUL:DRB|alg=R U'|setupmoves=U' R|flags=startsolved showalg">轉動21</div>
 <p>
-先用R面旋轉將邊塊旋轉至於R面上的對邊做為起始點，就是B邊，角塊則轉至R, U層重疊處的B邊，即URB處以進行UR旋轉，如果角塊扭轉到已可以與邊塊結合的方向，但邊塊還沒有旋轉到目的地RF處，就先將角塊用U面旋轉轉離R, U層重疊處，這樣這個角塊就不會再進行扭轉，等邊塊用R面旋轉至目的地RF處，再用U面旋轉將角塊轉至邊塊進行組合，如下面範例1
-<p>
-你也可以先觀察角塊須扭轉1次才能於邊塊結合。故先將邊塊轉至離目的地還需旋轉1/4圈的DR處，角塊則轉至URB處以進行UR旋轉，這樣角塊扭轉到已可以與邊塊結合的方向時，邊塊也恰好到達目的地RF處，也就剛好結合。如下面範例2
-<p>
-為之後的步驟方便解說，這種轉法稱為「RU組pair轉法」
-<p>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|setupmoves=U R U2 R U'|flags=startsolved showalg">圖2</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|alg=U R U2 R U'|flags=startsolved showalg">範例1</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=RUB:UBR RU:RB|alg=U R U|setupmoves=U' R U|flags=startsolved showalg">範例2</div>
-<h2>用RU組pair轉法組第2個pair</h2>
-觀察第2個pair邊塊與角塊的組合處與第1個pair邊塊與角塊的組合處成對邊方向，所以它用RU組pair轉法的起始點也與第1個pair呈對邊方向，也就是第1個pair的邊塊的起始點在B邊，第2個pair的邊塊的起始點就在F邊
-<p>
-因為你不能破壞剛組好的第1個pair，所以用RU組pair轉法組第2個pair時，要先將已組好的那個pair與要組的邊塊轉至U面並相連接，再將要組新pair的邊塊於U面旋轉至F邊當起始點，再進行RU組pair轉法，如下面範例3。
-<p>
-範例4為先觀察角塊須扭轉1次才能於邊塊結合。故先將邊塊轉至離目的地還需旋轉1/4圈的UL處，再進行RU組pair轉法
-<p>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=BLU:UFR UL:UF UBR:UFL RU:LU|alg=R U R' U R2|flags=startsolved showalg">範例3</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=BLU:UFR UL:UF UBR:UFL RU:LU|alg=R U R|setupmoves=R' U R|flags=startsolved showalg">範例4</div>
+當然下面3個轉動只是上面3個轉動的鏡像，其中一個也可以組出第二個pair
+<br>
+      <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UR x:URB UL:FR BUL:DRB|alg=R U2'|setupmoves=U' R U' R U2 R U'|flags=startsolved showalg">轉動21</div>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UR x:URB UL:FR ULB:DRB|alg=U2' R U R'|setupmoves=U' R U' R U2 R U'|flags=startsolved showalg">轉動15</div>
+  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=x:UR x:URB UL:FR LBU:DRB|alg=U' R|setupmoves=U' R U' R U2 R U'|flags=startsolved showalg">轉動3</div>
 
 <p>
 下一步：<a href="3pairs.html">降群為保留3個pairs的群</a> <a href="index.html">RUP解法</a>

@@ -1,12 +1,24 @@
+BODY, TD, LI   {font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; font-size: small}
+
 body {
   margin:0;
   padding:28px 0 0 8px;
   background-color:#fff;
 }
 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+th, td {
+  padding:12px;
+}
+
 div.lan {float:right;}
 div.hor {width:320px; padding-left:48px; display:inline-block;}
-div.hors {width:180px; padding-left:48px; display:inline-block;}
+div.hors {padding-left:32px; display:inline-block;}
 div.horh {padding-right:24px; display:inline-block;}
 div.horm {width:240px; padding-left:48px; display:inline-block;}
 .rp180 {width:140px;}
