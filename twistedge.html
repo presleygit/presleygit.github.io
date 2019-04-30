@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<title>扭轉邊塊至正確方向</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" href="cube.css"/>
+</head>
+<body>
+
+<script>
+  ROOFPIG_CONF_F5="hover=3|colors=F:o B:r U:y D:w R:b L:g|flags=startsolved showalg"
+  ROOFPIG_CONF_F6="hover=3|colors=F:o B:r U:y D:w R:b L:purple|flags=startsolved showalg"
+</script>
+
+<h1>扭轉邊塊至正確方向</h1>
+
+<h2>前言</h2>
+只旋轉U, R面就會有壞邊塊、好邊塊的分別。所謂壞邊塊就是你只轉R, U面旋轉永遠無法將這個邊塊扭轉成正確的方向。所謂好邊塊就是你只轉R, U面旋轉就可以將這個邊塊扭轉成正確的方向
+<p>
+這裡要將所有的壞邊塊轉成好邊塊，最後完成的其中一個範例如下
+<br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UR*/e ULB FD|solved=FUR-/ce FL|setupmoves=U' F' R' F U' R2 U F' R F U R U R' U'">範例1</div>
+
+<h2>壞邊塊、好邊塊判斷方式</h2>
+<p>
+邊塊與相鄰的中心塊做觀察
+<p>
+<div class="hor">
+非<span class="or">&emsp;</span><span class="wh">&emsp;</span>色邊塊
+<ul>
+<li>好邊塊的條件</li>
+  <ul>
+  <li>邊塊的<span class="ye">&emsp;</span>面靠近<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面靠近<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="ye">&emsp;</span>面遠離<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面遠離<span class="ye">&emsp;</span>面中心塊</li>
+  </ul>
+<li>壞邊塊的條件</li>
+  <ul>
+  <li>邊塊的<span class="ye">&emsp;</span>面靠近<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面靠近<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="ye">&emsp;</span>面遠離<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面遠離<span class="bl">&emsp;</span>面中心塊</li>
+  </ul>
+</ul>
+</div>
+<div class="hor">
+<span class="or">&emsp;</span><span class="wh">&emsp;</span>色邊塊
+<ul>
+<li>好邊塊的條件</li>
+  <ul>
+  <li>邊塊的<span class="or">&emsp;</span>面靠近<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="or">&emsp;</span>面遠離<span class="bl">&emsp;</span>面中心塊</li>
+  </ul>
+<li>壞邊塊的條件</li>
+  <ul>
+  <li>邊塊的<span class="or">&emsp;</span>面靠近<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="or">&emsp;</span>面遠離<span class="ye">&emsp;</span>面中心塊</li>
+  </ul>
+</ul>
+</div>
+<p>
+<div class="hors">
+  好邊塊範例
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=U:Uf U:Dr FD:UR|setupmoves=U' F' R' F U' R2 U F' R F U">範例2</div>
+</div>
+<div class="hors">
+  壞邊塊範例
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=R:Uf U:bR FD:RD|setupmoves=U' F' R' F U' R2 U F' R F U">範例3</div>
+</div>
+<p>
+要轉壞邊塊成好邊塊，將2個壞邊塊只用R, U面旋轉分別轉到下圖2或圖3中<span class="ibx">X</span>位置及3個<span class="iwx">X</span>位置中的一個，然後如下
+<p>
+<div class="horh">
+  <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=x:DR x:BR x:UR X:UF|setupmoves=U' F' R' F U' R2 U F' R F U R">圖2</div>
+</div>
+<div class="hort">
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=X:UF|setupmoves=U' F' R' F U' R2 U F' R F U R"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F將左圖<span class="ibx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|setupmoves=U' F' R' F U' R2 U F' R F U R F"></div>
+</div>
+&rarr;
+<div class="hort">
+  將另一個壞邊塊用R面旋轉轉至下圖<span class="iwx">X</span>的位置
+  <br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=x:UF|setupmoves=U' F' R' F U' R2 U F' R F U R F"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F'將左圖<span class="iwx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|setupmoves=U' F' R' F U' R2 U F' R F U R"></div>
+</div>
+<p>
+或是
+<p>
+<div class="horh">
+  <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=x:FD x:BU x:UR X:RD|setupmoves=U' F' R' F U' R2 U F' R F U">圖3</div>
+</div>
+<div class="hort">
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=X:RD|setupmoves=U' F' R' F U' R2 U F' R F U"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F'將左圖<span class="ibx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|setupmoves=U' F' R' F U' R2 U F' R F U F'"></div>
+</div>
+&rarr;
+<div class="hort">
+  將另一個壞邊塊用U面旋轉轉至下圖<span class="iwx">X</span>的位置
+  <br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=x:UR|setupmoves=U' F' R' F U' R2 U F' R F U F' U"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F將左圖<span class="iwx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|setupmoves=U' F' R' F U' R2 U F' R F U F' U F"></div>
+</div>
+
+<h2>範例</h2>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R UL ULB|solved=FUR-/ce FL|tweaks=U:uF FD:RB|alg=F R2' F'|setupmoves=U' F' R' F U' R2 U F' R F U">範例4</div>
+
+<p>
+下一步：<a href="2pairslack.html">完成第2個pair及2x2x3區塊欠缺的pair</a> <a href="index.html">總目錄</a>
+<p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">魔術方塊的RUPM, PRUM解法</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://www.facebook.com/presleykimo" property="cc:attributionName" rel="cc:attributionURL">吳宗諺</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>釋出。
+
+<script src="jquery.min.js"></script>
+<script src="roofpig_and_three.min.js"></script>
+
+</body>
+</html>

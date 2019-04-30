@@ -1,86 +1,176 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-	<title>降群為R, U面旋轉的群</title>
+	<title>進入&lt;R, U&gt;</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <link rel="stylesheet" href="cube.css"/>
 </head>
 <body>
 
-<h1>降群為R, U面旋轉的群</h1>
+<script>
+  ROOFPIG_CONF_F5="hover=3|colors=F:o B:r U:y D:w R:b L:g|flags=startsolved showalg"
+  ROOFPIG_CONF_F6="hover=3|colors=F:o B:r U:y D:w R:b L:purple|flags=startsolved showalg"
+  ROOFPIG_CONF_F7="hover=3|colors=B:pink|flags=startsolved showalg"
+</script>
+
+<h1>進入&lt;R, U&gt;</h1>
 
 <h2>前言</h2>
-這裡提供一個方法來退還所有其他非R, U面的旋轉，讓以後只用U, R面旋轉就可以轉回六面，所以才能讓RUP方法成為一種降群法，這也是和Petrus方法最大的分野，而且這個方法要簡便好用才行
+第一步組的2x2x3區塊，這裡是用下面圖1的顏色來解說
+<p>
+<div class="roofpig rp180" data-config="base=F5|colored=UR- U R">圖1</div>
 
 <h2>壞邊塊、好邊塊</h2>
-只旋轉U, R面就會有壞邊塊、好邊塊的分別。所謂壞邊塊就是你只轉R, U面旋轉永遠無法將這個邊塊扭轉成正確的方向。所謂好邊就是你只轉R, U面旋轉就可以將這個邊塊扭轉成正確的方向
+只旋轉U, R面就會有壞邊塊、好邊塊的分別。所謂壞邊塊就是你只轉R, U面旋轉永遠無法將這個邊塊扭轉成正確的方向。所謂好邊塊就是你只轉R, U面旋轉就可以將這個邊塊扭轉成正確的方向
 <p>
-要轉壞邊塊成好邊塊，將2個壞邊塊只用R, U面旋轉轉到下圖1<span class="re">&emsp;</span>色這兩個邊塊位置，然後用轉動1，F R' F'這個轉動就可以將這2個壞邊塊轉成好邊塊
+除非原本就沒有壞邊，否則先扭轉R, U層上邊塊方向至壞邊塊個數剩下2個
 <p>
-除非原本就沒有壞邊，否則先轉到只剩下2個壞邊
+邊塊與相鄰的中心塊做觀察
+<ul>
+<li>好邊塊的條件</li>
+  <ul>
+  <li>邊塊的<span class="ye">&emsp;</span>面靠近<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面靠近<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="ye">&emsp;</span>面遠離<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面遠離<span class="ye">&emsp;</span>面中心塊</li>
+  </ul>
+<li>壞邊塊的條件</li>
+  <ul>
+  <li>邊塊的<span class="ye">&emsp;</span>面靠近<span class="bl">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面靠近<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="ye">&emsp;</span>面遠離<span class="ye">&emsp;</span>面中心塊</li>
+  <li>邊塊的<span class="bl">&emsp;</span>面遠離<span class="bl">&emsp;</span>面中心塊</li>
+  </ul>
+</ul>
 <p>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UR F:UF|flags=startsolved showalg">圖1</div>
-<div class="roofpig rp180" data-config="colored=UR- U R|solved=UR-/ce|tweaks=R:Uf U:uR|alg=F R' F'|flags=startsolved showalg">轉動1</div>
+<div class="hors">
+  好邊塊範例
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=U:Uf U:Fr">範例1</div>
+</div>
+<div class="hors">
+  壞邊塊範例
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=R:Uf U:bR">範例2</div>
+</div>
+<p>
+要轉壞邊塊成好邊塊，將2個壞邊塊只用R, U面旋轉分別轉到下圖2或圖3中<span class="ibx">X</span>位置及3個<span class="iwx">X</span>位置中的一個，然後如下
+<p>
+<div class="horh">
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:DR x:BR x:UR X:UF">圖2</div>
+</div>
+<div class="hort">
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=X:UF"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F將左圖<span class="ibx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|setupmoves=F"></div>
+</div>
+&rarr;
+<div class="hort">
+  將另一個壞邊塊用R面旋轉轉至下圖<span class="iwx">X</span>的位置
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UR|setupmoves=F R'"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F'將左圖<span class="iwx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce"></div>
+</div>
+<p>
+或是
+<p>
+<div class="horh">
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:LU x:BU x:UR X:RF">圖3</div>
+</div>
+<div class="hort">
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=X:RF"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F'將左圖<span class="ibx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|setupmoves=F'"></div>
+</div>
+&rarr;
+<div class="hort">
+  將另一個壞邊塊用U面旋轉轉至下圖<span class="iwx">X</span>的位置
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UR|setupmoves=F' U"></div>
+</div>
+&rarr;
+<div class="hort">
+  用轉動F將左圖<span class="iwx">X</span>位置的壞邊塊轉成好邊塊
+  <br>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce"></div>
+</div>
+
+<p>
+範例如下
+<div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=U:uF U:bR|alg=F R2' F'">範例3</div>
 
 <h2>尋找異線</h2>
 
-現在D面是<span class="wh">&emsp;</span>色的，先將有<span class="wh">&emsp;</span>色的2個角塊轉到DRF, DRB這兩個位置，誰在位置DRF或誰在位置DRB並沒有關係。因為U面是<span class="ye">&emsp;</span>色的，所以剩下4個角塊都不考慮<span class="ye">&emsp;</span>色，只觀看其他顏色。如果發現有相鄰的2個角塊有相同非<span class="ye">&emsp;</span>色的其他顏色，假如是<span class="re">&emsp;</span>色，我們就用U面旋轉將這2個角塊皆轉到<span class="re">&emsp;</span>色那一面，就像是下面範例1，你會發現都有<span class="wh">&emsp;</span>色的相鄰兩個角塊位置互為交換，<span class="ye">&emsp;</span>面上有<span class="re">&emsp;</span>色相鄰的這2個角塊位置正確，<span class="ye">&emsp;</span>面剩下那兩個角塊則剛好位置互為交換，這裡用X符號表示這2個相鄰的角塊位置互為交換，沒有X符號表示這2個相鄰的角塊位置正確
+現在D面是<span class="wh">&emsp;</span>色的，先將有<span class="wh">&emsp;</span>色的2個角塊轉到DRF, DRB這兩個位置，誰在位置DRF或誰在位置DRB並沒有關係。因為U面是<span class="ye">&emsp;</span>色的，所以剩下4個角塊都不考慮<span class="ye">&emsp;</span>色，只觀看其他顏色。如果發現有相鄰的2個角塊有相同非<span class="ye">&emsp;</span>色的其他顏色，假如是<span class="or">&emsp;</span>色，我們就用U面旋轉將這2個角塊皆轉到<span class="or">&emsp;</span>色那一面，就像是下面範例4，你會發現都有<span class="wh">&emsp;</span>色的相鄰兩個角塊位置互為交換，<span class="ye">&emsp;</span>面上有<span class="or">&emsp;</span>色相鄰的這2個角塊位置正確，<span class="ye">&emsp;</span>面剩下那兩個角塊則剛好位置互為交換，這裡用X符號表示這2個相鄰的角塊位置互為交換，沒有X符號表示這2個相鄰的角塊位置正確
 <p>
-這裡會有3條線，其中2條中的角塊位置是互為交換的，而有1條跟其他2條不一樣，這條中角塊的位置是正確的，而不是互為交換的，那條跟其他2條不一樣的線就是異線，異線中的那2個角塊就是我們要找的，在下面範例1中就是UFL, UFR這兩個角塊
+這裡會有3條線，其中2條中的角塊位置是互為交換的，而有1條跟其他2條不一樣，這條中角塊的位置是正確的，而不是互為交換的，那條跟其他2條不一樣的線就是異線，異線中的那2個角塊就是我們要找的，在下面範例4中就是UFL, UFR這兩個角塊
 <p>
-<div class="roofpig rp180" data-config="colored=B L F U R D ULF ULB URF URB DRF DRB|solved=UR-/ce|tweaks=X:DRF X:DRB X:ULB X:URB|setupmoves=U' F R' F' U R' U2">範例1</div>
+<div class="roofpig rp180" data-config="base=F5|colored=B L F U R D ULF ULB URF URB DRF DRB|solved=UR-/ce|tweaks=X:DRF X:DRB X:ULB X:URB|setupmoves=U' F R' F' U R' U2">範例4</div>
 
 <h2>一些異線的範例</h2>
 下面中同顏色的角塊有X符號表示這2個相鄰的角塊位置互為交換，沒有X符號表示這2個相鄰的角塊位置正確，每個例子都有同顏色的3條線，其中有一條中的角塊位置交換情形和其他2條不一樣，下面用<span class="ye">&emsp;</span>色來表示，這就是我們要找的異線
 <p>
 如果沒有<span class="ye">&emsp;</span>色，那就表示沒有異線
 <p>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=R:DFR R:DBR U:UFR U:UBR X:UFR X:UBR B:UFL B:UBL">範例2</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=U:DFR U:DBR R:UFR R:UBR X:UFR X:UBR B:UFL B:UBL X:UFL X:UBL">範例3</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=R:DFR R:DBR X:DFR X:DBR B:UFR B:UFL X:UFR X:UFL U:UBR U:UBL">範例4</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=U:DFR U:DBR X:DFR X:DBR R:UFR R:UBR B:UFL B:UBL">範例5</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=L:DFR L:DBR X:DFR X:DBR R:UFR R:UBR X:UFR X:UBR B:UFL B:UBL X:UFL X:UBL">範例6</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=R:DFR R:DBR U:UFR U:UBR X:UFR X:UBR B:UFL B:UBL">範例5</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:DFR U:DBR R:UFR R:UBR X:UFR X:UBR B:UFL B:UBL X:UFL X:UBL">範例6</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=R:DFR R:DBR X:DFR X:DBR B:UFR B:UFL X:UFR X:UFL U:UBR U:UBL">範例7</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:DFR U:DBR X:DFR X:DBR R:UFR R:UBR B:UFL B:UBL">範例8</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=L:DFR L:DBR X:DFR X:DBR R:UFR R:UBR X:UFR X:UBR B:UFL B:UBL X:UFL X:UBL">範例9</div>
 
-<h2>歸還其他非R, U面的旋轉</h2>
+<h2>進入&lt;R, U&gt;</h2>
 
 <dl>
-<dt>剩2個壞邊塊，也有異線的情形</dt>
+<dt>剩2個壞邊塊，也有異線的Case</dt>
 <dd>
-下面4種任選一種皆可完成。將異線上的2個角塊與剩下的2個壞邊塊只用R, U面旋轉轉到下面<span class="re">&emsp;</span>色的位置，按其說明歸還其他非R, U面的旋轉
+下面4種任選一種皆可完成。將異線上的2個角塊與剩下的2個壞邊塊只用R, U面旋轉轉到下面<span class="re">&emsp;</span>色的位置，按其說明進入&lt;R, U&gt;
 <p>
 <div class="hors">
    使用轉動F R' F'來解<br>
-   <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:UF|alg=F R' F'|flags=startsolved showalg">轉動2</div>
+   <div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:UF|alg=F R' F'">轉動1</div>
 </div>
 <div class="hors">
    使用轉動F' U F來解<br>
-  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:RF|alg=F' U F|flags=startsolved showalg">轉動3</div>
+  <div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:RF|alg=F' U F">轉動2</div>
 </div>
 <div class="hors">
    使用轉動B' R B來解<br>
-  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:UB|alg=B' R B|flags=startsolved showalg">轉動4</div>
+  <div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:UB|alg=B' R B">轉動3</div>
 </div>
 <div class="hors">
    使用轉動B U' B'來解<br>
-  <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:RB|alg=B U' B'|flags=startsolved showalg">轉動5</div>
+  <div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=F:UFR F:UBR F:UR F:RB|alg=B U' B'">轉動4</div>
 </div>
 </dd>
-<dt>剩2個壞邊塊，但沒有異線的情形</dt>
+<dt>剩2個壞邊塊，但沒有異線的Case</dt>
 <dd>
-將2個壞邊塊只用R, U面旋轉轉到下面<span class="re">&emsp;</span>色的位置，用轉動F R2 U R U' F'歸還其他非R, U面的旋轉
+將2個壞邊塊只用R, U面旋轉轉到下面<span class="re">&emsp;</span>色的位置，用轉動F R2 U R U' F'進入&lt;R, U&gt;
 <p>
-   <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UR F:UF|alg=F R2 U R U' F'|flags=startsolved showalg">轉動6</div>
+   <div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=F:UR F:UF|alg=F R2 U R U' F'">轉動5</div>
 </dd>
-<dt>沒有壞邊塊，但有異線的情形</dt>
+<dt>沒有壞邊塊，但有異線的Case</dt>
 <dd>
-將異線上的2個角塊只用R, U面旋轉轉到下面<span class="re">&emsp;</span>色的位置，用轉動F R' U R U' F'歸還其他非R, U面的旋轉
+將異線上的2個角塊只用R, U面旋轉轉到下面<span class="re">&emsp;</span>色的位置，用轉動F R' U R U' F'進入&lt;R, U&gt;
 <p>
-   <div class="roofpig rp180" data-config="colored=D|solved=UR-|tweaks=F:UBL F:UBR|alg=F R' U R U' F'|flags=startsolved showalg">轉動7</div>
+   <div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=F:UBL F:UBR|alg=F R' U R U' F'">轉動6</div>
 </dd>
-<dt>沒有壞邊塊，也沒有異線的情形</dt>
+<dt>沒有壞邊塊，也沒有異線的Case</dt>
 <dd>
-已完成歸還其他非R, U面的旋轉
+已在&lt;R, U&gt;內
 </dd>
 </dl>
 
@@ -91,17 +181,17 @@
 可以跟據<span class="ye">&emsp;</span>色的位置看下面那張圖符合你異線的位置，用其他相同顏色的那兩個角塊來取代異線上的那兩個角塊，也會有降群的效果
 <p>
 有可替代異線上的角塊會讓你在只能用R, U面旋轉組合壞邊塊時更加的方便
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFR U:UBR D:DFR D:UFL B:UBL B:DBR">圖2</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:DFR U:DBR D:UFR D:UBL B:UFL B:UBR">圖3</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UBR U:UBL D:UFR D:DFR B:UFL B:DBR">圖4</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFR U:UFL D:UBR D:DBR B:UBL B:DFR">圖5</div>
-<div class="roofpig rp180" data-config="colored=D|solved=UR-|colors=B:pink|tweaks=U:UFL U:UBL D:UFR D:DBR B:UBR B:DFR">圖6</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:UFR U:UBR D:DFR D:UFL B:UBL B:DBR">圖4</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:DFR U:DBR D:UFR D:UBL B:UFL B:UBR">圖5</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:UBR U:UBL D:UFR D:DFR B:UFL B:DBR">圖6</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:UFR U:UFL D:UBR D:DBR B:UBL B:DFR">圖7</div>
+<div class="roofpig rp180" data-config="base=F7|colored=D|solved=UR-|tweaks=U:UFL U:UBL D:UFR D:DBR B:UBR B:DFR">圖8</div>
 <p>
-如下面範例7，異線位置會在UFL, UFR，跟據這個位置找到上面圖5的<span class="ye">&emsp;</span>色恰好在這兩個位置，依據上面圖5可以用位於ULB, DRF那兩個角塊，或是位於URB, DRB那兩個角塊來取代原本異線中那兩個角塊
+如下面範例10，用<span class="ibx">X</span>標示原本的壞邊塊，異線位置會在UFL, UFR，跟據這個位置找到上面圖7的<span class="ye">&emsp;</span>色恰好在這兩個位置，依據上面圖7可以用位於ULB, DRF那兩個角塊，或是位於URB, DRB那兩個角塊來取代原本異線中那兩個角塊
 <p>
 而位於URB, DRB那2個角塊早已剛好連結個壞邊塊，所以我們用位於URB, DRB那兩個角塊會比原來的那兩個角塊來得好用
 <p>
-<div class="roofpig rp180" data-config="colored=B L F U R D UR*|solved=UR-/ce|alg=R' B' R B|setupmoves=U' F R' F' U R' U2 U F R2 U R U' F' R2 U2 R U R' U R2|flags=startsolved showalg">範例7</div>
+<div class="roofpig rp180" data-config="base=F5|colored=B L F U R D UR*|solved=UR-/ce|tweaks=X:RB X:UL|alg=R' B' R B|setupmoves=U' F R' F' U R' U2 U F R2 U R U' F' R2 U2 R U R' U R2">範例10</div>
 <div class="hor">
   <ul>
   <li>第1轉轉為轉動4前的狀態</li>
@@ -110,9 +200,9 @@
 </div>
 
 <p>
-下一步：<a href="2pairs.html">降群為保留2個pairs的群</a> <a href="index.html">RUP解法</a>
+下一步：<a href="2pairs.html">完成2個pairs</a> <a href="index.html">總目錄</a>
 <p>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">魔術方塊的RUP解法</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://www.facebook.com/presleykimo" property="cc:attributionName" rel="cc:attributionURL">吳宗諺</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>釋出。
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/3.0/tw/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">魔術方塊的RUPM, PRUM解法</span>由<a xmlns:cc="http://creativecommons.org/ns#" href="https://www.facebook.com/presleykimo" property="cc:attributionName" rel="cc:attributionURL">吳宗諺</a>製作，以<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/tw/">創用CC 姓名標示-非商業性-禁止改作 3.0 台灣 授權條款</a>釋出。
 
 <script src="jquery.min.js"></script>
 <script src="roofpig_and_three.min.js"></script>
