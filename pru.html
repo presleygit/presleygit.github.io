@@ -77,18 +77,19 @@
 <dl>
   <dt>綠角塊與紅角塊相鄰</dt>
   <dd>
-  <div class="hor">
-    綠角塊在紅角塊的U方向，或
-    <br>
-    綠角塊在紅角塊的D方向，且
-    <br>
-    白角塊在紅角塊的F方向，但不可以在紅角塊的B方向
-    <br>
+  <div class="horh">
+    下面三個條件皆須符合
+    <ul>
+    <li>綠角塊在紅角塊的U方向，或綠角塊在紅角塊的D方向</li>
+    <li>紅角塊的F方向若有角塊，則必是白角塊</li>
+    <li>紅角塊的B方向若有角塊，則不是白角塊</li>
+    </ul>
     使用轉動F' R' F U' R2 U F' R F
     <br>
-    其中一個範例如下
+    其中2個範例如下
     <br>
     <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=F' R' F U' R2 U F' R F|setupmoves=U' F' R' F U' R2 U F' R F  U' R' U R' U R2 U2 R2' U' R2'">範例2</div>
+    <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=F' R' F U' R2 U F' R F|setupmoves=U' R F' R' F U' R2 U F' R F  U' R' U R' U R2 U2 R2' U' R2'">範例3</div>
   </div>
   </dd>
   <dt>綠角塊與紅角塊不相鄰</dt>
@@ -100,7 +101,7 @@
     <br>
     其中一個範例如下
     <br>
-    <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=F' R' F U' R2 U2 F' R F R' U'|setupmoves=U' F' R' F U' R2 U2 F' R F R' U'  U' R' U R' U R2 U2 R2' U' R2'  R">範例3</div>
+    <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=F' R' F U' R2 U2 F' R F R' U'|setupmoves=U' F' R' F U' R2 U2 F' R F R' U'  U' R' U R' U R2 U2 R2' U' R2'  R">範例4</div>
   </div>
   <div class="hor">
     白角塊在紅角塊的順時針方向
@@ -109,7 +110,7 @@
     <br>
     其中一個範例如下
     <br>
-    <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=F' R' F U' R2 U F' R' F R U F' R F R' U'|setupmoves=U' F' R' F U' R2 U F' R' F R U F' R F R' U'  U' R' U R' U R2 U2 R2' U' R2'  R">範例4</div>
+    <div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=F' R' F U' R2 U F' R' F R U F' R F R' U'|setupmoves=U' F' R' F U' R2 U F' R' F R U F' R F R' U'  U' R' U R' U R2 U2 R2' U' R2'  R">範例5</div>
   </div>
   </dd>
 </dl>
@@ -119,7 +120,7 @@
 <p>
 其中一個範例如下
 <br>
-<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=R' F' R' F U' R2 U F' R F|setupmoves=U' R' F' R' F U' R2 U F' R F  U' R' U R' U R2 U2 R2' U' R2'  U' R' U R' U R2 U2 R2' U' R2'  R">範例5</div>
+<div class="roofpig rp180" data-config="base=F5|colored=FUR- F U R DF DLF ULF DRF DRB URF|solved=FUR-/ce FL|tweaks=x:UL x:ULB x:UR x:URB|alg=R' F' R' F U' R2 U F' R F|setupmoves=U' R' F' R' F U' R2 U F' R F  U' R' U R' U R2 U2 R2' U' R2'  U' R' U R' U R2 U2 R2' U' R2'  R">範例6</div>
 <div class="hor">
   左邊範例為綠角塊與紅角塊相鄰，但綠角塊不在紅角塊的U或D方向，所以可使用R面旋轉來調整
   <ul>
