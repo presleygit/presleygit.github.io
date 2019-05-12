@@ -154,21 +154,21 @@
 下面組pair A的轉動，也都有一個鏡像，全都是把旋轉R換成U'，旋轉R'換成U，旋轉U換成R'，旋轉U'換成R
 <p>
 <div class="hors">
-  Case 1, 位置ee
+  Case 1, 邊塊位置ee
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR UF:BR|alg=R2 U"></div>
 <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR UF:BR|alg=U2' R'|setupmoves=R' U' R' U2 R U2 R' U' R2 R' U' R' U2 R">鏡像</div>
 </div>
 <div class="hors">
-  Case 1, 位置pn
+  Case 1, 邊塊位置pn
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR UF:FR|alg=R2 U' R2' U2"></div>
 <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF FRU:FDR UF:DR|alg=U2' R U2 R2'|setupmoves=R' U' R' U2 R U2 R' U' R2 R' U' R' U2 R">鏡像</div>
 </div>
 <div class="hors">
-  Case 2, 位置pp
+  Case 2, 邊塊位置pp
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RUF:FDR UF:UL|alg=R2 U R2' U2' R2"></div>
 <br>
@@ -178,21 +178,21 @@
 當然你也會有組pair B的轉動，只要將上面要組pair角塊與邊塊中的<span class="ye">&emsp;</span>&harr;<span class="bl">&emsp;</span>，<span class="bl">&emsp;</span>&harr;<span class="or">&emsp;</span>
 <br>
 <div class="hors">
-  Case 1, 位置ee
+  Case 1, 邊塊位置ee
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RUF:FDR FR:BR|alg=R2 U"></div>
 <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RUF:FDR FR:BR|alg=U2' R'|setupmoves=R' U' R' U2 R U2 R' U' R2 R' U' R' U2 R">鏡像</div>
 </div>
 <div class="hors">
-  Case 1, 位置pn
+  Case 1, 邊塊位置pn
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RUF:FDR FR:FR|alg=R2 U' R2' U2"></div>
 <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF RUF:FDR FR:DR|alg=U2' R U2 R2'|setupmoves=R' U' R' U2 R U2 R' U' R2 R' U' R' U2 R">鏡像</div>
 </div>
 <div class="hors">
-  Case 2, 位置pp
+  Case 2, 邊塊位置pp
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R|solved=UR-/ce|tweaks=x:UB x:UBL x:UF x:UFL x:UR x:URF UFR:FDR FR:UL|alg=R2 U R2' U2' R2"></div>
 <br>
@@ -304,9 +304,13 @@
   </td>
   <td>
   鏡射P
+  <br>
+  (前往Case 2, 邊塊位置pp)
   </td>
   <td>
   鏡射Q
+  <br>
+  (前往Case 2, 邊塊位置pp)
   </td>
   <td>
   恰成pair
@@ -318,12 +322,18 @@
   </th>
   <td>
   鏡射P
+  <br>
+  (前往Case 1, 邊塊位置ee)
   </td>
   <td>
   鏡射Q
+  <br>
+  (前往Case 1, 邊塊位置ee)
   </td>
   <td>
   鏡射P
+  <br>
+  (前往Case 1, 邊塊位置pn)
   </td>
   <td>
   改組另一個pair
@@ -334,7 +344,7 @@
 若pair A還未組成，卻發現其邊塊在位置ne，則只好放棄改組pair B。同相地，若pair B還未組成，卻發現其邊塊在位置ne，則只好放棄改組pair A
 
 <p>
-下面2個特殊狀況，無論用鏡射P或鏡射Q皆無法進入組pair A或組pair B的轉動，其解法如下
+下面2個特殊狀況，無論用鏡射P或鏡射Q一次內皆無法進入組pair A或組pair B的轉動，其解法如下
 <br>
 <div class="hors">
   轉動1
