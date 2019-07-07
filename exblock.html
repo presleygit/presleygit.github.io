@@ -16,34 +16,38 @@
 <h1>拓展為3個pairs與1個1x2x2區塊</h1>
 
 <h2>前言</h2>
-接下來其實沒多少轉動可以選擇。要將已做好的其中1個pair拓展成1個1x2x2的區塊，必須是下面有顏色的1x2x2的區塊其中之一。有X符號的部份為之前已做好的4個pair。
+接下來其實沒多少轉動可以選擇。要將已做好的其中1個pair拓展成1個1x2x2的區塊，必須是下面有顏色的1x2x2的區塊其中之一。有X符號的部份為之前已做好的pair。
 <p>
 這個步驟的所有轉動皆只轉動R, U面，且不破壞之前步驟已做好的4個pair
 <p>
-<div class="roofpig rp180" data-config="base=F5|colored=U UL UB ULB UR-|solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
-<div class="roofpig rp180" data-config="base=F5|colored=R DR RB DRB UR-|solved=UR-/ce|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
+<div class="roofpig rp180" data-config="base=F5|colored=U UL UB ULB UR-|solved=UR-/ce|tweaks=x:UL x:ULB"></div>
+<div class="roofpig rp180" data-config="base=F5|colored=R DR RB DRB UR-|solved=UR-/ce|tweaks=x:DR x:DRB"></div>
 
 <h2>4個pair拓展出3個pair和1個1x2x2區塊</h2>
 下面<span class="iwx">X</span>的部份為已做好的pair
 <p>
 
 <div class="hors">
-  組合邊塊與中心塊
+  組合邊塊-中心塊pair
   <br>
-  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB|solved=UR-/ce|alg=U R2 U' R'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB RB|solved=UR-/ce|alg=U R2 U' R' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
 <div class="hors">
-  將邊塊轉出兩舊pair之間
+  邊塊-中心塊pair在兩舊pair之間
   <br>
-  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB|solved=UR-/ce|alg=R' U2' R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U R U2' R' U2'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB UL ULB|solved=UR-/ce|alg=U' R2|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U R U2' R' U2'  U R U R2 U' R' U'  U R'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在同一層
+  邊塊-中心塊pair不在兩舊pair之間 且
+  <br>
+  與要組的pair在同一層
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB UL ULB|solved=UR-/ce|alg=R' U2' R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U U2|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在沒在同一層
+  邊塊-中心塊pair不在兩舊pair之間 且
+  <br>
+  與要組的pair不在同一層
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB UL ULB|solved=UR-/ce|alg=U2' R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U R U2' R' U2' R' U2' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
@@ -51,22 +55,26 @@
 
 當然你也可以選擇先組另一個區塊
 <div class="hors">
-  組合邊塊與中心塊
+  組合邊塊-中心塊pair
   <br>
-  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R RB|solved=UR-/ce|alg=R' U R U2' R' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R UB RB|solved=UR-/ce|alg=R' U2' R U R|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R  R' U'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
 <div class="hors">
-  將邊塊轉出兩舊pair之間
+  邊塊-中心塊pair在兩舊pair之間
   <br>
-  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R RB|solved=UR-/ce|alg=U R2' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R R' U R U2' R' U' R U R2' U'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
+  <div class="roofpig rp180" data-config="base=F5|colored=UR- U R RB RD RDB|solved=UR-/ce|alg=R U2'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R U R2 U' R' U R U2' R' U2'  U R U R2 U' R' U'  U2|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在同一層
+  邊塊-中心塊pair不在兩舊pair之間 且
+  <br>
+  與要組的pair在同一層
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R RB DR DRB|solved=UR-/ce|alg=U R2 U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R R' U R U2' R' U' R U R2' U' R2 U' R2 U R2'|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
 <div class="hors">
-  要組合區塊的兩pair在沒在同一層
+  邊塊-中心塊pair不在兩舊pair之間 且
+  <br>
+  與要組的pair不在同一層
   <br>
   <div class="roofpig rp180" data-config="base=F5|colored=UR- U R RB DR DRB|solved=UR-/ce|alg=R2' U'|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R R' U R U2' R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 </div>
@@ -78,8 +86,8 @@
 <div class="roofpig rp180" data-config="base=F5|solved=UR-/ce|alg=U R2 U' R' U' R' U2' R U R U R2 U' R2' U|setupmoves=U' R2 U R U' R' U' R' U R U2 R' U2' R2' U R2 R2 U R2 U2 R' U' R|tweaks=x:UL x:ULB x:UR x:URB x:DR x:DRB x:URF x:UF"></div>
 <div class="hor">
   <ul>
-  <li>第1~4轉為組合邊塊與中心塊</li>
-  <li>第5~8轉為拓展1x2x2區塊</li>
+  <li>第1~5轉為組合邊塊與中心塊</li>
+  <li>第6~8轉為拓展1x2x2區塊</li>
   <li>第9~15轉為不破壞原3個pair及那個1x2x2區塊限制下的唯一那條路，順著走便可還原</li>
   </ul>
 </div>
